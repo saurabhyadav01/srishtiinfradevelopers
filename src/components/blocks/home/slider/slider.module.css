@@ -1,0 +1,126 @@
+.next-btn{
+    right: 10px;
+}
+.prev-btn{
+    left: 10px;
+}
+
+.next-btn, .prev-btn {
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    transition: all .4s ease;
+    border: 2px solid white;
+    color: white;
+}
+
+.next-btn:hover, .prev-btn:hover{
+    background-color: white;
+    color: gray;
+}
+
+.slider-backdrop, .slide-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.slider-backdrop{
+    z-index: 10;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.8) 100%);
+    transition: opacity 0.5s ease;
+}
+
+.slide-container {
+    z-index: 11;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.slide-heading > * {
+    font-size: clamp(28px, 28px + 2vw, 32px) !important;
+    color: white;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    opacity: 0.95;
+    transition: opacity 0.3s ease;
+}
+
+.slide-paragraph > p{
+    color: rgba(219, 219, 219, 0.9) !important;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+}
+.slide-btns{
+    font-size: 16px;
+    color: white !important;
+    background-color: rgba(23, 32, 63, 0.9);
+    text-transform: uppercase;
+    text-decoration: none !important;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    letter-spacing: 0.75px;
+    padding: 8px 24px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    opacity: 0.9;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.slide-btns:hover {
+    opacity: 1;
+    background-color: rgba(23, 32, 63, 1);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+.slide-btns > *:first-child{
+    font-size: 16px;
+
+    color: white !important;
+    background-color: #17203f;
+    text-transform: uppercase;
+    text-decoration: none !important;
+    border: none;
+    cursor: pointer;
+    transition: all 500ms ease;
+    display: inline-block;
+    letter-spacing: 0.75px;
+    padding: 5px 20px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    border-radius: 4px;
+}
+
+.slide-btns > *:nth-child(2){
+    font-size: 16px;
+  
+    color: white !important;
+    background-color: #17203f;
+    text-transform: uppercase;
+    text-decoration: none !important;
+    border: none;
+    cursor: pointer;
+    transition: all 500ms ease;
+    display: inline-block;
+    letter-spacing: 0.75px;
+    padding: 5px 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 4px;
+ 
+}
+.swiper-container:hover .next-btn,
+.swiper-container:hover .prev-btn {
+  display: block;
+}
