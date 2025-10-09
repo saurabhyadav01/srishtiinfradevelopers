@@ -24,11 +24,8 @@ const Footer8: FC = () => {
           <div className="col-md-4 col-lg-3">
             <div className="widget">
               <h4 className="widget-title text-white mb-3">Get in Touch</h4>
-              <address className="mb-2">56 Tisdale Drive,<br />
-Dover MA 02030 (U.S.A)</address>
-              <address className="mb-3">4th Floor,<br />
-Urbtech Trade Center,<br />
-Sector 153 Noida (India)</address>
+              <address className="mb-3">Sanskriti Garden,<br />
+Roza Jalalpur, Greater Noida West</address>
               <p className="mb-0">
                 <NextLink title="info@thissrishtiinfradevelopers.com" href="mailto:info@thissrishtiinfradevelopers.com" className="text-white" />
               </p>

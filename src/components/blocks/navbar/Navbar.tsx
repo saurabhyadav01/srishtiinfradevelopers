@@ -85,10 +85,10 @@ const Navbar: FC<NavbarProps> = (props) => {
               <ListItemLink title={'HOME'} href="/" linkClassName="nav-link" />
             </li>
                  <li className="nav-item">
-              <ListItemLink title={'PROJECTS'} href="/poject" linkClassName="nav-link" />
+              <ListItemLink title={'PROJECTS'} href="/projects" linkClassName="nav-link" />
             </li>
-             <li className="nav-item">
-              <ListItemLink title={'PORTFOLIO'} href="/portfolio" linkClassName="nav-link" />
+            <li className="nav-item">
+              <ListItemLink title={'PORTFOLIO'} href="/projects" linkClassName="nav-link" />
             </li>
             <li className="nav-item">
               <ListItemLink title={'ABOUT US'} href="/about" linkClassName="nav-link" />

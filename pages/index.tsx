@@ -26,7 +26,17 @@ import * as Allss from 'components/blocks/contact';
 import { fadeInAnimate } from 'utils/animation';
 
 const Demo15: NextPage = () => {
-
+  const moreProjectImages: string[] = [
+    '/img/WhatsApp Image 2025-09-29 at 11.56.20.jpeg',
+    '/img/WhatsApp Image 2025-09-29 at 11.56.21.jpeg',
+    '/img/WhatsApp Image 2025-09-29 at 11.56.21 (1).jpeg',
+    '/img/WhatsApp Image 2025-09-29 at 11.56.21 (2).jpeg',
+    '/img/WhatsApp Image 2025-09-29 at 11.56.21 (3).jpeg',
+    '/img/WhatsApp Image 2025-09-29 at 11.56.22.jpeg',
+    '/img/WhatsApp Image 2025-09-29 at 11.56.22 (1).jpeg',
+    '/img/WhatsApp Image 2025-09-29 at 11.56.22 (2).jpeg'
+  ];
+  
   
   return (
     <Fragment>
@@ -160,29 +170,88 @@ const Demo15: NextPage = () => {
               <About6 />
             </div>
 
-            {/* Srishti Infra: Featured Video & Brochure */}
-            <div className="row mt-10" style={fadeInAnimate('400ms')}>
+        
+
+            {/* ========== upcoming projects section ========== */}
+            <section className="wrapper bg-light rounded-3 mt-10" style={{ boxShadow: '0 10px 30px rgba(0,0,0,0.06)' }}>
+              <div className="container py-8 py-md-10" style={{ maxWidth: '100%' }}>
+                <div className="row mb-6 align-items-center" style={fadeInAnimate('200ms')}>
+                  <div className="col-lg-12 d-flex align-items-center">
+                    <div className="icon-badge me-3 icon-animate" style={{ backgroundColor: '#17203f', padding: '12px', borderRadius: '12px' }}>
+                      <img src="/img/icons/lineal/photo.svg" alt="Upcoming Projects Icon" width={24} height={24} style={{ filter: 'invert(1)', opacity: 0.95 }} />
+                    </div>
+                    <h2 className="mb-0">Upcoming Projects</h2>
+                  </div>
+                </div>
+
+                <div className="row g-4" style={fadeInAnimate('400ms')}>
+                  <div className="col-12 col-sm-6 col-lg-4">
+                    <div className="card border-0 shadow-sm h-100">
+                      <img className="card-img-top" src={encodeURI('/img/WhatsApp Image 2025-10-04 at 13.39.11.jpeg')} alt="Upcoming project 1" />
+                    </div>
+                  </div>
+                  <div className="col-12 col-sm-6 col-lg-4">
+                    <div className="card border-0 shadow-sm h-100">
+                      <img className="card-img-top" src={encodeURI('/img/WhatsApp Image 2025-10-04 at 13.39.12.jpeg')} alt="Upcoming project 2" />
+                    </div>
+                  </div>
+                  <div className="col-12 col-sm-6 col-lg-4">
+                    <div className="card border-0 shadow-sm h-100">
+                      <img className="card-img-top" src={encodeURI('/img/WhatsApp Image 2025-10-04 at 13.39.12 (1).jpeg')} alt="Upcoming project 3" />
+                    </div>
+                  </div>
+                  <div className="col-12 col-sm-6 col-lg-6">
+                    <div className="card border-0 shadow-sm h-100">
+                      <img className="card-img-top" src={encodeURI('/img/WhatsApp Image 2025-10-04 at 13.39.12 (2).jpeg')} alt="Upcoming project 4" />
+                    </div>
+                  </div>
+                  <div className="col-12 col-sm-6 col-lg-6">
+                    <div className="card border-0 shadow-sm h-100">
+                      <img className="card-img-top" src={encodeURI('/img/WhatsApp Image 2025-10-04 at 13.39.13.jpeg')} alt="Upcoming project 5" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            {/* ========== more projects (additional images) ========== */}
+            <section className="wrapper bg-soft-primary rounded-3 mt-8">
+              <div className="container py-8 py-md-10" style={{ maxWidth: '100%' }}>
+                <div className="row mb-6 align-items-center" style={fadeInAnimate('200ms')}>
+                  <div className="col-lg-12 d-flex align-items-center">
+                    <div className="icon-badge me-3 icon-animate" style={{ backgroundColor: '#17203f', padding: '12px', borderRadius: '12px' }}>
+                      <img src="/img/icons/lineal/gallery.svg" alt="More Projects Icon" width={24} height={24} style={{ filter: 'invert(1)', opacity: 0.95 }} />
+                    </div>
+                    <h2 className="mb-0">More Projects</h2>
+                  </div>
+                </div>
+                <div className="row g-4" style={fadeInAnimate('400ms')}>
+                  {moreProjectImages.map((src, index) => (
+                    <div key={index} className="col-12 col-sm-6 col-lg-4">
+                      <div className="card border-0 shadow-sm h-100">
+                        <img className="card-img-top" src={encodeURI(src)} alt={`More project ${index + 1}`} />
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </section>
+    {/* What We Do? section using current image */}
+    <div className="row mt-10" style={fadeInAnimate('400ms')}>
               <div className="col-lg-7">
                 <div className="card shadow-sm border-0">
-                  <div className="card-body p-0">
-                    <video controls style={{ width: '100%', height: 'auto', borderRadius: '0.5rem' }} poster="/img/logo.jpg">
-                      <source src="/img/N-237 Srishti Infra Plots Sector 12 Noida Video.mp4" type="video/mp4" />
-                      Your browser does not support the video tag.
-                    </video>
-                  </div>
+                  <img className="card-img-top" src={encodeURI('/img/WhatsApp Image 2025-10-04 at 13.39.13.jpeg')} alt="What We Do - Srishti Infra" />
                 </div>
               </div>
               <div className="col-lg-5">
                 <div className="card h-100 shadow-sm border-0">
                   <div className="card-body d-flex flex-column justify-content-center">
-                    <h3 className="mb-3">Srishti Infra Developers Brochure</h3>
-                    <p className="mb-4">Download our latest designs and offering details.</p>
-                    <a className="btn btn-primary" href="/img/Designs.pdf" target="_blank" rel="noreferrer">View / Download PDF</a>
+                    <h3 className="mb-3">What We Do?</h3>
+                    <p className="mb-0">We provide comprehensive real estate solutions tailored to your needs.</p>
                   </div>
                 </div>
               </div>
             </div>
-
             {/* Partner ecosystem section removed per request */}
 
             {/* Application technology spotlight removed per request */}
@@ -193,6 +262,32 @@ const Demo15: NextPage = () => {
  
             {/* ========== process section ========== */}
             {/* <Process7 /> */}
+          </div>
+        </section>
+        {/* Srishti Infra: Featured Video & Brochure (restored) */}
+        <section className="wrapper bg-light">
+          <div className="container py-8 py-md-10" style={{ maxWidth: '90%' }}>
+            <div className="row mt-2" style={fadeInAnimate('200ms')}>
+              <div className="col-lg-7">
+                <div className="card shadow-sm border-0">
+                  <div className="card-body p-0">
+                    <video controls style={{ width: '100%', height: 'auto', borderRadius: '0.5rem' }} poster="/img/logo.jpg">
+                      <source src="/img/N-237 Srishti Infra Plots Sector 12 Noida Video.mp4" type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                </div>
+              </div>
+              <div className="col-lg-5 mt-4 mt-lg-0">
+                <div className="card h-100 shadow-sm border-0">
+                  <div className="card-body d-flex flex-column justify-content-center">
+                    <h3 className="mb-3">Srishti Infra Developers Brochure</h3>
+                    <p className="mb-4">Download our latest designs and offering details.</p>
+                    <a className="btn btn-primary" href="/img/Designs.pdf" target="_blank" rel="noreferrer">View / Download PDF</a>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
       {/* ========== process section ==========    */}

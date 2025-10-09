@@ -55,7 +55,7 @@ const ContactThree: NextPage = () => {
                   <div className="card-body p-5">
                     <h6 className="text-primary fw-semibold mb-2">INDIA</h6>
                     <h5 className="mb-2">Srishti Infra Developers</h5>
-                    <p className="mb-3">4th Floor, Urbtech Trade Center, Sector 153, Noida, India</p>
+                    <p className="mb-3">Sanskriti Garden, Roza Jalalpur, Greater Noida West</p>
                     <div className="d-flex align-items-center mb-2">
                       <i className="uil uil-phone-volume text-primary me-2" />
                       <span>+91&nbsp;88846&nbsp;30503</span>
