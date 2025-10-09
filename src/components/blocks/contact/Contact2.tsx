@@ -25,8 +25,7 @@ const Contact2: FC = () => {
                 </div>
                 <div>
                   <h6 className="mb-1">Call Us</h6>
-                  <p className="mb-0 text-muted">USA: +1-603-9300-375</p>
-                  <p className="mb-0 text-muted">India: +91 96506 23339</p>
+                  <p className="mb-0 text-muted">India: +91 99996 25939</p>
                 </div>
               </div>
             </div>

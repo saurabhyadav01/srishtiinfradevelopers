@@ -77,7 +77,7 @@ const ContactTwo: NextPage = () => {
 
                   <div>
                     <h5 className="mb-1">Phone</h5>
-                    <p>USA: +1-603-9300-375<br />India: +91 96506 23339</p>
+                    <p>India: +91 99996 25939</p>
                   </div>
                 </div>
 

@@ -41,7 +41,7 @@ const ContactThree: NextPage = () => {
                     <p className="mb-3">56 Tisdale Drive, Dover, MA 02030, USA</p>
                     <div className="d-flex align-items-center mb-2">
                       <i className="uil uil-phone-volume text-primary me-2" />
-                      <span>+1&nbsp;302&nbsp;5203&nbsp;211</span>
+                      <span>+91&nbsp;99996&nbsp;25939</span>
                     </div>
                     <div className="d-flex align-items-center">
                       <i className="uil uil-envelope text-primary me-2" />
@@ -58,7 +58,7 @@ const ContactThree: NextPage = () => {
                     <p className="mb-3">Sanskriti Garden, Roza Jalalpur, Greater Noida West</p>
                     <div className="d-flex align-items-center mb-2">
                       <i className="uil uil-phone-volume text-primary me-2" />
-                      <span>+91&nbsp;88846&nbsp;30503</span>
+                      <span>+91&nbsp;99996&nbsp;25939</span>
                     </div>
                     <div className="d-flex align-items-center">
                       <i className="uil uil-envelope text-primary me-2" />
@@ -91,7 +91,7 @@ const ContactThree: NextPage = () => {
                   </div>
                   <div className="d-flex align-items-center">
                     <i className="uil uil-phone-volume text-primary me-2" />
-                    <span>USA: +1-603-9300-375 | India: +91 96506 23339</span>
+                    <span>India: +91 99996 25939</span>
                   </div>
                 </div>
               </div>
