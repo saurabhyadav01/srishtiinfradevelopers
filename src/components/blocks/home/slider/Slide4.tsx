@@ -3,18 +3,17 @@ import Link from 'next/link';
 
 const Slide4 = () => {
   return (
-    <div className="h-100" style={{ background: `url('/img/pexels-pixabay-273665.jpg')`, backgroundRepeat: "no-repeat", backgroundSize: "cover", backgroundPosition: "center" }}>
+    <div className="h-100" style={{ background: `url('/img/WhatsApp Image 2025-11-05 at 17.52.45.jpeg')`, backgroundRepeat: "no-repeat", backgroundSize: "cover", backgroundPosition: "center" }}>
       <div className={styles['slider-backdrop']}>
       </div>
       <div className={`container ${styles['slide-container']}`}>
         <div>
           <div className={styles['slide-heading']}>
-            <h2>ENTERPRISE CLOUD SOLUTIONS</h2>
-            <h2>FOR MODERN BUSINESS</h2>
-            <h3>TRANSFORMATION</h3>
+            <h2>Project marketing that accelerates bookings and collections.</h2>
+            <h3 style={{ fontWeight: 400 }}>Data-led campaigns, site experiences, and channel partner outreach.</h3>
           </div>
           <div className={styles['slide-paragraph']}>
-            <p>Accelerate your digital transformation with our comprehensive cloud and ERP solutions.</p>
+            <p>We set up sales offices, manage brokers, and keep customer pipelines active.</p>
           </div>
           <div className="clearfix"></div>
           <div data-swiper-parallax="500" className={styles['slide-btns']}>

@@ -6,18 +6,17 @@ import Link from 'next/link';
 // console.log(img)
 const Slide3 = () => {
   return (
-    <div className="h-100" style={{ background:  'url("/img/pexels-vlada-karpovich-4050303.jpg")', backgroundRepeat: "no-repeat", backgroundSize: "cover", backgroundPosition: "center" }}>
+    <div className="h-100" style={{ background:  'url("/img/WhatsApp Image 2025-11-05 at 17.52.44 (2).jpeg")', backgroundRepeat: "no-repeat", backgroundSize: "cover", backgroundPosition: "center" }}>
       <div className={styles['slider-backdrop']}>
       </div>
       <div className={`container ${styles['slide-container']}`}>
         <div>
           <div className={styles['slide-heading']}>
-            <h2>Over 20 years of creating infrastructure that lasts.</h2>
-<h3>Experience you can rely on. Quality you can live on.</h3>
-</div>
+            <h2>Strategic land acquisition and joint development partnerships.</h2>
+            <h3 style={{ fontWeight: 400 }}>We identify high-growth locations and unlock value for landowners.</h3>
+          </div>
           <div className={styles['slide-paragraph']}>
-            <p>Strengthening communities with trust and innovation for over two decades..
-.</p>
+            <p>Structured deals, clear titles, and sustainable revenue models for every project.</p>
           </div>
           <div className="clearfix"></div>
           <div data-swiper-parallax="500" className={styles['slide-btns']}>

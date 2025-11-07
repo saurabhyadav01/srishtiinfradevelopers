@@ -18,20 +18,17 @@ const Slide = ({ data }: ISlide) => {
     const { bgImage, heading, paragraph, cta } = data;
 
     return (
-        <div className="h-100" style={{ background:  'url("/img/pexels-kindelmedia-7651627.jpg")', backgroundRepeat: "no-repeat",backgroundSize: "cover", backgroundPosition: "center" }}>
+        <div className="h-100" style={{ background:  'url("/img/WhatsApp Image 2025-11-05 at 17.52.44.jpeg")', backgroundRepeat: "no-repeat",backgroundSize: "cover", backgroundPosition: "center" }}>
             <div className={styles['slider-backdrop']}>
             </div>
             <div className={`container ${styles['slide-container']}`}>
                 <div>
                     <div className={styles['slide-heading']}>
-                  <h2>Building trust, brick by brick, for over two decades. </h2>
-                  <h2>20+ years of shaping skylines and strengthening foundations.</h2>
-                  <h2>Where experience meets excellence in infrastructure</h2>
-
-               
+                  <h2>Comprehensive real estate development across Noida and the NCR.</h2>
+                  <h3 style={{ fontWeight: 400 }}>From land procurement to project sales and customer handover.</h3>
                     </div>
                     <div className={styles['slide-paragraph']}>
-                        <p>{paragraph}</p>
+                        <p>Two decades of expertise in planning, approvals, construction, and transaction support.</p>
                     </div>
                     <div className="clearfix"></div>
                     <div data-swiper-parallax="500" className={styles['slide-btns']}>

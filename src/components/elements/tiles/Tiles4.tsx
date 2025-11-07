@@ -4,22 +4,34 @@ const images = [
   {
     id: 1,
     className: 'col-md-4 offset-md-2 align-self-end',
-    image: { '1x': '/img/photos/g1.jpg', '2x': '/img/photos/g1@2x.jpg 2x' }
+    image: {
+      '1x': '/img/WhatsApp Image 2025-09-29 at 11.56.20.jpeg',
+      '2x': '/img/WhatsApp Image 2025-09-29 at 11.56.20.jpeg 2x'
+    }
   },
   {
     id: 2,
     className: 'col-md-6 align-self-end',
-    image: { '1x': '/img/photos/g2.jpg', '2x': '/img/photos/g2@2x.jpg 2x' }
+    image: {
+      '1x': '/img/WhatsApp Image 2025-09-29 at 11.56.21.jpeg',
+      '2x': '/img/WhatsApp Image 2025-09-29 at 11.56.21.jpeg 2x'
+    }
   },
   {
     id: 3,
     className: 'col-md-6 offset-md-1',
-    image: { '1x': '/img/photos/g3.jpg', '2x': '/img/photos/g3@2x.jpg 2x' }
+    image: {
+      '1x': '/img/WhatsApp Image 2025-09-29 at 11.56.21 (1).jpeg',
+      '2x': '/img/WhatsApp Image 2025-09-29 at 11.56.21 (1).jpeg 2x'
+    }
   },
   {
     id: 4,
     className: 'col-md-4 align-self-start',
-    image: { '1x': '/img/photos/g4.jpg', '2x': '/img/photos/g4@2x.jpg 2x' }
+    image: {
+      '1x': '/img/WhatsApp Image 2025-09-29 at 11.56.21 (2).jpeg',
+      '2x': '/img/WhatsApp Image 2025-09-29 at 11.56.21 (2).jpeg 2x'
+    }
   }
 ];
 

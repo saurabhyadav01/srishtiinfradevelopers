@@ -38,7 +38,7 @@ const Slider = () => {
         <SwiperSlide>
           <Slide2 />
         </SwiperSlide>
-        {/* <SwiperSlide>
+        <SwiperSlide>
           <Slide3 />
         </SwiperSlide>
         <SwiperSlide>
@@ -49,7 +49,7 @@ const Slider = () => {
         </SwiperSlide>
         <SwiperSlide>
           <Slide6 />
-        </SwiperSlide> */}
+        </SwiperSlide>
       </Swiper>
 
     </section>

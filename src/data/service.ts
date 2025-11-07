@@ -77,28 +77,28 @@ export const serviceList2 = [
     linkUrl: '#',
     title: '24/7 Support',
     icon: 'uil-phone-volume',
-    description: `Etiam porta sem malesuada magna mollis euismod. Donec ullamcorper nulla non metus auctor fringilla.`
+    description: `Get assistance anytime with our dedicated support team, ready to help you resolve issues and answer questions around the clock.`
   },
   {
     id: 2,
     linkUrl: '#',
     title: 'Secure Payments',
     icon: 'uil-shield-exclamation',
-    description: `Etiam porta sem malesuada magna mollis euismod. Donec ullamcorper nulla non metus auctor fringilla.`
+    description: `Get assistance anytime with our dedicated support team, ready to help you resolve issues and answer questions around the clock.`
   },
   {
     id: 3,
     linkUrl: '#',
     title: 'Daily Updates',
     icon: 'uil-laptop-cloud',
-    description: `Etiam porta sem malesuada magna mollis euismod. Donec ullamcorper nulla non metus auctor fringilla.`
+    description: `Get assistance anytime with our dedicated support team, ready to help you resolve issues and answer questions around the clock.`
   },
   {
     id: 4,
     linkUrl: '#',
     title: 'Market Research',
     icon: 'uil-chart-line',
-    description: `Etiam porta sem malesuada magna mollis euismod. Donec ullamcorper nulla non metus auctor fringilla.`
+    description: `Get assistance anytime with our dedicated support team, ready to help you resolve issues and answer questions around the clock.`
   }
 ];
 

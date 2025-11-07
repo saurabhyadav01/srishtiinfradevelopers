@@ -5,18 +5,17 @@ import Link from 'next/link';
 // console.log(img)
 const Slide2 = () => {
   return (
-    <div className="h-100" style={{ background: `url('/img/pexels-pixabay-164572.jpg')`, backgroundRepeat: "no-repeat", backgroundSize: "cover", backgroundPosition: "center" }}>
+    <div className="h-100" style={{ background: `url('/img/WhatsApp Image 2025-11-05 at 17.52.44 (1).jpeg')`, backgroundRepeat: "no-repeat", backgroundSize: "cover", backgroundPosition: "center" }}>
       <div className={styles['slider-backdrop']}>
       </div>
       <div className={`container ${styles['slide-container']}`}>
         <div>
           <div className={styles['slide-heading']}>
-            <h2>Two decades of delivering strength, reliability, and innovation.</h2>
-            <h2>Your trusted partner in building the future since 2000+</h2>
-            <h3>20 years of proven expertise, countless strong foundations</h3>
+            <h2>Dedicated sales advisory for plots, villas, and commercial assets.</h2>
+            <h3 style={{ fontWeight: 400 }}>Transparent pricing, documentation, and customer onboarding.</h3>
           </div>
           <div className={styles['slide-paragraph']}>
-            <p> Engineering trust. Delivering excellence.</p>
+            <p>Our real estate team guides buyers and investors at every milestone.</p>
           </div>
           <div className="clearfix"></div>
           <div data-swiper-parallax="500" className={styles['slide-btns']}>

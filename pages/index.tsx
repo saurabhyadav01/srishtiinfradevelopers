@@ -36,6 +36,28 @@ const Demo15: NextPage = () => {
     '/img/WhatsApp Image 2025-09-29 at 11.56.22 (1).jpeg',
     '/img/WhatsApp Image 2025-09-29 at 11.56.22 (2).jpeg'
   ];
+  const whatWeDoFeatures = [
+    {
+      title: '24/7 Support',
+      description:
+        'Get assistance anytime with our dedicated support team, ready to help you resolve issues and answer questions around the clock.'
+    },
+    {
+      title: 'Secure Payments',
+      description:
+        'Get assistance anytime with our dedicated support team, ready to help you resolve issues and answer questions around the clock.'
+    },
+    {
+      title: 'Daily Updates',
+      description:
+        'Get assistance anytime with our dedicated support team, ready to help you resolve issues and answer questions around the clock.'
+    },
+    {
+      title: 'Market Research',
+      description:
+        'Get assistance anytime with our dedicated support team, ready to help you resolve issues and answer questions around the clock.'
+    }
+  ];
   
   
   return (
@@ -236,18 +258,40 @@ const Demo15: NextPage = () => {
                 </div>
               </div>
             </section>
-    {/* What We Do? section using current image */}
-    <div className="row mt-10" style={fadeInAnimate('400ms')}>
-              <div className="col-lg-7">
-                <div className="card shadow-sm border-0">
-                  <img className="card-img-top" src={encodeURI('/img/WhatsApp Image 2025-10-04 at 13.39.13.jpeg')} alt="What We Do - Srishti Infra" />
+            {/* What We Do? section */}
+            <div className="row mt-10" style={fadeInAnimate('400ms')}>
+              <div className="col-lg-7 mb-4 mb-lg-0">
+                <div className="card shadow-sm border-0 h-100">
+                  <img
+                    className="card-img-top"
+                    src={encodeURI('/img/WhatsApp Image 2025-10-04 at 13.39.13.jpeg')}
+                    alt="What We Do - Srishti Infra"
+                  />
                 </div>
               </div>
               <div className="col-lg-5">
                 <div className="card h-100 shadow-sm border-0">
                   <div className="card-body d-flex flex-column justify-content-center">
                     <h3 className="mb-3">What We Do?</h3>
-                    <p className="mb-0">We provide comprehensive real estate solutions tailored to your needs.</p>
+                    <p className="mb-4">
+                      The full service we are offering is specifically designed to meet your business needs and projects.
+                    </p>
+                    <div className="d-flex flex-column" style={{ gap: '18px' }}>
+                      {whatWeDoFeatures.map(({ title, description }) => (
+                        <div key={title} className="d-flex align-items-start">
+                          <div
+                            className="me-3 d-flex align-items-center justify-content-center"
+                            style={{ width: '40px', height: '40px', borderRadius: '12px', backgroundColor: '#17203f' }}
+                          >
+                            <i className="uil uil-check text-white" />
+                          </div>
+                          <div>
+                            <h5 className="mb-1" style={{ fontWeight: 600 }}>{title}</h5>
+                            <p className="mb-0" style={{ color: '#4a5568' }}>{description}</p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>
