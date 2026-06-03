@@ -50,7 +50,7 @@ export const runningProjects: RealEstateProject[] = [
     location: 'Sanskriti Garden, Sector 16B, Noida Extension',
     type: 'Residential Plots & Gardens',
     status: 'running',
-    image: '/img/WhatsApp Image 2025-11-05 at 17.52.45.jpeg',
+    image: runningImage('WhatsApp Image 2026-05-31 at 18.30.11.jpeg'),
     description:
       'Residential plots and garden homes in Sanskriti Kunj Garden, Noida Extension — green surroundings, clear titles, and modern community planning near PNB Branch, Roja Yakubpur.',
     highlights: ['Plots Available', 'Garden Community', 'Noida Extension']

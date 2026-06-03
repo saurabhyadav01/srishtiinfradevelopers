@@ -43,10 +43,10 @@ export const featuredProperties = [
   },
   {
     id: 2,
-    title: 'Sanskriti Kunj Garden',
-    location: 'Sanskriti Garden, Sector 16B, Noida Extension',
-    type: 'Residential Plots & Gardens',
-    image: '/img/WhatsApp Image 2025-11-05 at 17.52.45 (1).jpeg'
+    title: 'Sanskriti Residency',
+    location: 'Noida, Uttar Pradesh',
+    type: 'Residential Apartments',
+    image: '/img/projects/WhatsApp Image 2026-05-31 at 18.30.12.jpeg'
   }
 ];
 

@@ -62,8 +62,8 @@ const HomeHeroBanner: FC = () => {
                     {slide.subline}
                   </p>
                   <div className="mt-3 d-flex flex-wrap justify-content-center gap-1">
-                    <Link href="/projects#running" className="btn btn-accent rounded-0">
-                      View Projects
+                    <Link href="/#delivered" className="btn btn-accent rounded-0">
+                      Our Delivered Projects
                     </Link>
                     <a
                       href={companyContact.whatsappUrl}
