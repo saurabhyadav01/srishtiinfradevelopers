@@ -29,7 +29,7 @@ const HomePage: NextPage = () => {
     <Fragment>
       <style jsx global>{`
         .home-page-nav .nav-link {
-          font-weight: 500;
+          font-weight: 600;
           text-transform: uppercase;
           letter-spacing: 0.02em;
         }
