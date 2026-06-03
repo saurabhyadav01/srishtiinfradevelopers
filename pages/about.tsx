@@ -13,8 +13,8 @@ const AboutPage: NextPage = () => {
   return (
     <Fragment>
       <PageProgress />
-      <header className="wrapper mb-1">
-        <div className="container" style={{ maxWidth: '90%' }}>
+      <header className="wrapper mb-1 home-header">
+        <div className="container py-0" style={{ maxWidth: '90%' }}>
           <Navbar social navClassName="navbar navbar-expand-lg center-nav navbar-light caret-none" />
         </div>
       </header>

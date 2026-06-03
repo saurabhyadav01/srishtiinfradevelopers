@@ -9,8 +9,8 @@ const SiteTopBar: FC = () => {
         style={{
           backgroundColor: '#2d3748',
           color: '#fff',
-          fontSize: '0.78rem',
-          padding: '8px 12px'
+          fontSize: '0.75rem',
+          padding: '5px 10px'
         }}
       >
         <div className="d-flex flex-column align-items-center gap-1 text-center">
@@ -44,8 +44,8 @@ const SiteTopBar: FC = () => {
         style={{
           backgroundColor: '#2d3748',
           color: '#fff',
-          fontSize: '0.85rem',
-          padding: '10px 0'
+          fontSize: '0.8rem',
+          padding: '5px 0'
         }}
       >
         <div

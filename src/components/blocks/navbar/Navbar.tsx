@@ -68,10 +68,18 @@ const Navbar: FC<NavbarProps> = (props) => {
   // all main header contents
   const headerContent = (
     <Fragment>
-      <div className="navbar-brand w-100">
-        <NextLink href="/" title={<img alt="logo" width={180}src={`/img/logo.jpg`}  />} />
-        <br></br>
-        <span className='marginTop:-10'><b>{companyContact.name}</b></span>
+      <div className="navbar-brand w-100 compact-navbar-brand">
+        <NextLink
+          href="/"
+          title={
+            <span className="d-inline-flex align-items-center gap-2 flex-wrap">
+              <img alt="logo" src="/img/logo.jpg" className="compact-navbar-logo" />
+              <span className="compact-navbar-title">
+                <b>{companyContact.name}</b>
+              </span>
+            </span>
+          }
+        />
       </div>
 
       <div id="offcanvas-nav" data-bs-scroll="true" className="navbar-collapse offcanvas offcanvas-nav offcanvas-start">

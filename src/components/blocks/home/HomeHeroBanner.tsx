@@ -61,15 +61,15 @@ const HomeHeroBanner: FC = () => {
                   <p className="text-white mb-0 opacity-90" style={{ fontSize: 'clamp(0.95rem, 2vw, 1.1rem)' }}>
                     {slide.subline}
                   </p>
-                  <div className="mt-4 d-flex flex-wrap justify-content-center gap-2">
-                    <Link href="/projects#running" className="btn btn-accent rounded-0 px-4">
+                  <div className="mt-3 d-flex flex-wrap justify-content-center gap-1">
+                    <Link href="/projects#running" className="btn btn-accent rounded-0">
                       View Projects
                     </Link>
                     <a
                       href={companyContact.whatsappUrl}
                       target="_blank"
                       rel="noreferrer"
-                      className="btn btn-outline-light rounded-0 px-4"
+                      className="btn btn-outline-light rounded-0"
                     >
                       Enquire Now
                     </a>

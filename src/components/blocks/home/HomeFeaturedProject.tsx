@@ -63,7 +63,7 @@ const HomeFeaturedProject: FC = () => {
                     </span>
                   ))}
                 </div>
-                <div className="mt-auto d-flex flex-wrap gap-2">
+                <div className="mt-auto d-flex flex-wrap gap-1">
                   <Link href="/projects#running" className="btn btn-accent rounded-pill">
                     View Project Details
                   </Link>

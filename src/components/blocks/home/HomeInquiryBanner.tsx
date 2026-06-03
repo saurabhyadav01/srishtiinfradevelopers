@@ -15,12 +15,12 @@ const HomeInquiryBanner: FC = () => {
             </p>
           </div>
           <div className="col-lg-5">
-            <div className="d-flex flex-column flex-sm-row gap-3 justify-content-lg-end">
-              <a href="tel:+919999625939" className="btn btn-accent btn-lg rounded-pill">
-                <i className="uil uil-phone me-2" />
+            <div className="d-flex flex-column flex-sm-row gap-2 justify-content-lg-end">
+              <a href="tel:+919999625939" className="btn btn-accent rounded-pill">
+                <i className="uil uil-phone me-1" />
                 +91 99996 25939
               </a>
-              <Link href="/about/contact" className="btn btn-outline-white btn-lg rounded-pill">
+              <Link href="/about/contact" className="btn btn-outline-white rounded-pill">
                 Contact Us
               </Link>
             </div>

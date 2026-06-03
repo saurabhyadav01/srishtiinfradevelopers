@@ -60,7 +60,7 @@ const HomeContactSection: FC = () => {
                   href={companyContact.whatsappUrl}
                   target="_blank"
                   rel="noreferrer"
-                  className="btn btn-accent rounded-pill px-4"
+                  className="btn btn-accent rounded-pill"
                 >
                   <i className="uil uil-whatsapp me-1" />
                   WhatsApp Us
@@ -76,7 +76,7 @@ const HomeContactSection: FC = () => {
         </div>
 
         <div className="text-center mt-6">
-          <Link href="/about/contact" className="btn btn-outline-primary rounded-pill px-4">
+          <Link href="/about/contact" className="btn btn-outline-primary rounded-pill">
             Contact Form
           </Link>
         </div>

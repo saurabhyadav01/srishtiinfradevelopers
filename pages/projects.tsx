@@ -13,8 +13,8 @@ const ProjectsPage: NextPage = () => {
     <Fragment>
       <PageProgress />
       <SiteTopBar />
-      <header className="wrapper mb-1" style={{ background: '#fff', boxShadow: '0 1px 0 rgba(0,0,0,0.06)' }}>
-        <div className="container" style={{ maxWidth: '90%' }}>
+      <header className="wrapper mb-1 home-header" style={{ background: '#fff', boxShadow: '0 1px 0 rgba(0,0,0,0.06)' }}>
+        <div className="container py-0" style={{ maxWidth: '90%' }}>
           <Navbar social navClassName="navbar navbar-expand-lg center-nav navbar-light caret-none" />
         </div>
       </header>

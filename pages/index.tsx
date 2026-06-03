@@ -77,9 +77,9 @@ const HomePage: NextPage = () => {
       <SiteTopBar />
 
       <header className="home-header wrapper mb-0">
-        <div className="container py-2" style={{ maxWidth: '95%' }}>
+        <div className="container py-0" style={{ maxWidth: '95%' }}>
           <div className="home-page-nav">
-            <Navbar social navClassName="navbar navbar-expand-lg center-nav navbar-light caret-none py-2" />
+            <Navbar social navClassName="navbar navbar-expand-lg center-nav navbar-light caret-none py-0" />
           </div>
         </div>
       </header>
@@ -119,7 +119,7 @@ const HomePage: NextPage = () => {
                 imageHeight={320}
               />
               <div className="text-center pt-2 pb-4">
-                <Link href="/projects#running" className="btn btn-accent rounded-pill px-4">
+                <Link href="/projects#running" className="btn btn-accent rounded-pill">
                   View All Running Projects
                 </Link>
               </div>
@@ -136,7 +136,7 @@ const HomePage: NextPage = () => {
                 imageHeight={280}
               />
               <div className="text-center pt-2 pb-4">
-                <Link href="/projects#delivered" className="btn btn-outline-primary rounded-pill px-4">
+                <Link href="/projects#delivered" className="btn btn-outline-primary rounded-pill">
                   View All Delivered Projects
                 </Link>
               </div>

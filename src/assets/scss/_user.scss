@@ -65,6 +65,51 @@ h1, h2, h3, h4, h5, h6,
   }
 }
 
+// Compact buttons — consistent padding across site
+.btn.btn-accent,
+.btn.btn-primary,
+.btn.btn-outline-primary,
+.btn.btn-outline-light,
+.btn.btn-outline-white {
+  padding: 0.35rem 0.9rem !important;
+  font-size: 0.85rem;
+  line-height: 1.35;
+  font-weight: 600;
+}
+
+.btn.btn-lg.btn-accent,
+.btn.btn-lg.btn-outline-white,
+.btn.btn-lg.btn-outline-primary {
+  padding: 0.45rem 1.1rem !important;
+  font-size: 0.875rem;
+}
+
+// Floating WhatsApp — same compact scale, less offset from edges
+.btn-whatsapp-float {
+  bottom: 14px;
+  right: 14px;
+  z-index: 1050;
+  background-color: #25d366;
+  padding: 0.35rem 0.75rem !important;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.8rem;
+  line-height: 1.35;
+  margin: 0;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+
+  &:hover {
+    background-color: #1ebe57;
+    color: #fff;
+    transform: translateY(-1px);
+  }
+}
+
+.btn-whatsapp-float-icon {
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
 .bg-soft-primary {
   background-color: var(--re-bg-soft) !important;
 }
@@ -97,6 +142,41 @@ h1, h2, h3, h4, h5, h6,
   &.active {
     color: var(--re-accent-dark) !important;
   }
+}
+
+// Compact site header / menu bar
+.compact-navbar-brand {
+  padding-top: 0.2rem !important;
+  padding-bottom: 0.2rem !important;
+  margin-right: 0;
+}
+
+.compact-navbar-logo {
+  max-height: 48px;
+  width: auto !important;
+  height: auto;
+  display: block;
+}
+
+.compact-navbar-title {
+  font-size: 0.8rem;
+  line-height: 1.2;
+  color: var(--re-primary-dark);
+}
+
+.navbar.center-nav .navbar-nav .nav-link {
+  padding-top: 0.35rem !important;
+  padding-bottom: 0.35rem !important;
+  font-size: 0.85rem;
+}
+
+header.home-header .container {
+  padding-top: 0.25rem !important;
+  padding-bottom: 0.25rem !important;
+}
+
+header.home-header .navbar {
+  min-height: auto;
 }
 
 .card {
