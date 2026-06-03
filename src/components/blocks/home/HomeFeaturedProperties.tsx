@@ -1,12 +1,7 @@
 import { FC } from 'react';
 import Link from 'next/link';
-import { runningProjects } from 'data/real-estate-projects';
+import { featuredProperties } from 'data/home';
 import theme from 'data/theme';
-
-const featuredTitles = ['Sanskriti Villas', 'Sanskriti Kunj Garden'];
-const featured = featuredTitles
-  .map((title) => runningProjects.find((p) => p.title === title))
-  .filter((p): p is NonNullable<typeof p> => Boolean(p));
 
 const HomeFeaturedProperties: FC = () => {
   return (
@@ -21,7 +16,7 @@ const HomeFeaturedProperties: FC = () => {
         </div>
 
         <div className="row g-4">
-          {featured.map((project) => (
+          {featuredProperties.map((project) => (
             <div key={project.id} className="col-md-6 col-lg-6">
               <Link href="/projects#running" className="text-decoration-none">
                 <div

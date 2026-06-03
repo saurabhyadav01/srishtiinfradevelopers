@@ -33,6 +33,23 @@ export const heroSlides = officeSliderImages.map((image, index) => ({
   subline: officeSliderCopy[index].subline
 }));
 
+export const featuredProperties = [
+  {
+    id: 1,
+    title: 'Sanskriti Villas',
+    location: 'Greater Noida West',
+    type: 'Residential Villas',
+    image: '/img/projects/WhatsApp Image 2026-05-31 at 18.30.13.jpeg'
+  },
+  {
+    id: 2,
+    title: 'Sanskriti Kunj Garden',
+    location: 'Sanskriti Garden, Sector 16B, Noida Extension',
+    type: 'Residential Plots & Gardens',
+    image: '/img/WhatsApp Image 2025-11-05 at 17.52.45 (1).jpeg'
+  }
+];
+
 export const homeStats = [
   { id: 1, value: new Date().getFullYear() - companyContact.foundedYear, suffix: '+', label: 'Years of Experience', icon: 'uil-calendar-alt' },
   { id: 2, value: 7, suffix: '+', label: 'Total Projects', icon: 'uil-building' },
