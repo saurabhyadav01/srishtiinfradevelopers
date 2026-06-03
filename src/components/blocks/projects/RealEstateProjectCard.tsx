@@ -52,7 +52,7 @@ const RealEstateProjectCard: FC<Props> = ({ project, imageHeight = 280 }) => {
           {project.type}
         </span>
 
-        <p className="card-text mb-3 flex-grow-1" style={{ color: theme.text, fontSize: '0.95rem', lineHeight: '1.7' }}>
+        <p className="card-text mb-3 flex-grow-1 small" style={{ color: theme.text, fontSize: '0.8rem', lineHeight: 1.5 }}>
           {project.description}
         </p>
 

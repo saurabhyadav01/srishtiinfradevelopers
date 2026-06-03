@@ -48,7 +48,7 @@ const HomeFeaturedProject: FC = () => {
                 style={{ height: '360px', objectFit: 'cover' }}
               />
               <div className="card-body d-flex flex-column">
-                <p className="mb-4" style={{ lineHeight: '1.7', color: theme.text }}>
+                <p className="mb-4 small" style={{ fontSize: '0.8rem', lineHeight: 1.5, color: theme.text }}>
                   {featuredProject.description}
                 </p>
                 <div className="d-flex flex-wrap gap-2 mb-4">

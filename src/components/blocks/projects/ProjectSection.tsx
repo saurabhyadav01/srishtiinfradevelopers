@@ -34,7 +34,7 @@ const ProjectSection: FC<Props> = ({
               <SectionIcon iconClass={iconClass} />
               <h2 className="mb-0 ms-3" style={{ color: theme.primaryDark }}>{title}</h2>
             </div>
-            <p className="lead mb-0" style={{ color: theme.textMuted }}>{subtitle}</p>
+            <p className="mb-0 small" style={{ color: theme.textMuted, fontSize: '0.875rem' }}>{subtitle}</p>
           </div>
         </div>
 

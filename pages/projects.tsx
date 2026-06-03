@@ -28,7 +28,7 @@ const ProjectsPage: NextPage = () => {
                   <SectionIcon iconClass="uil uil-building" size={28} />
                   <h1 className="mb-0 ms-3">Our Projects</h1>
                 </div>
-                <p className="lead mb-0">
+                <p className="mb-0 small" style={{ fontSize: '0.875rem' }}>
                   Explore our portfolio of residential and commercial developments across Noida, Greater Noida, and the NCR region.
                 </p>
               </div>
