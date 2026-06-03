@@ -8,6 +8,7 @@ import Breadcrumb from 'components/reuseable/Breadcrumb';
 import PageProgress from 'components/common/PageProgress';
 import ContactForm from 'components/common/ContactForm';
 import NextLink from 'components/reuseable/links/NextLink';
+import companyContact from 'data/contact';
 // -------- data -------- //
 const breadcrumb = [
   { id: 1, title: 'Home', url: '/' },
@@ -60,7 +61,7 @@ const ContactTwo: NextPage = () => {
                   </div>
 
                   <div>
-                    <h5 className="mb-1">Srishti Infra Developers</h5>
+                    <h5 className="mb-1">{companyContact.name}</h5>
                     <address>
                       USA Office: New Hampshire, United States <br className="d-none d-md-block" />
                       India Office: New Delhi, India

@@ -3,6 +3,7 @@ import Image from 'next/image';
 // -------- custom component -------- //
 import NextLink from 'components/reuseable/links/NextLink';
 import SocialLinks from 'components/reuseable/SocialLinks';
+import companyContact from 'data/contact';
 // -------- data -------- //
 import footerNav from 'data/footer';
 
@@ -13,9 +14,9 @@ const Footer8: FC = () => {
         <div className="row gy-6 gy-lg-0">
           <div className="col-md-4 col-lg-3">
             <div className="widget">
-              <img className="mb-4" src="/img/logo.jpg" width="120" alt="Srishti Infra Developers" />
+              <img className="mb-4" src="/img/logo.jpg" width="120" alt={companyContact.name} />
 
-              <p className="mb-4">2025© Srishti Infra Developers. <br className="d-none d-lg-block" />All rights reserved.</p>
+              <p className="mb-4">2025© {companyContact.name}. <br className="d-none d-lg-block" />All rights reserved.</p>
 
               <SocialLinks className="nav social social-white" />
             </div>
@@ -24,10 +25,12 @@ const Footer8: FC = () => {
           <div className="col-md-4 col-lg-3">
             <div className="widget">
               <h4 className="widget-title text-white mb-3">Get in Touch</h4>
-              <address className="mb-3">Sanskriti Garden,<br />
-Roza Jalalpur, Greater Noida West</address>
+              <address className="mb-3">{companyContact.address}</address>
+              <p className="mb-1">
+                <NextLink title={companyContact.phone} href={`tel:${companyContact.phoneTel}`} className="text-white" />
+              </p>
               <p className="mb-0">
-                <NextLink title="info@thissrishtiinfradevelopers.com" href="mailto:info@thissrishtiinfradevelopers.com" className="text-white" />
+                <NextLink title={companyContact.email} href={`mailto:${companyContact.email}`} className="text-white" />
               </p>
             </div>
           </div>

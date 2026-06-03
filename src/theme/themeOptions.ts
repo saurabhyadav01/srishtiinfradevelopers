@@ -1,9 +1,9 @@
+const REAL_ESTATE_PAGES = ['/', '/projects', '/about', '/about/contact', '/portfolio'];
+
 const changeColor = (colorPath?: string | null, fontPath?: string | null) => {
-  // remove previous link
   document.getElementById('custom-theme')?.remove();
   document.getElementById('custom-font')?.remove();
 
-  // add new color link
   if (colorPath) {
     const link = document.createElement('link');
     link.setAttribute('href', colorPath);
@@ -12,24 +12,22 @@ const changeColor = (colorPath?: string | null, fontPath?: string | null) => {
     document.querySelector('head')?.appendChild(link);
   }
 
-  // add new custom font
   if (fontPath) {
     const link = document.createElement('link');
     link.setAttribute('href', fontPath);
-    link.setAttribute('rel', 'preload');
-    link.setAttribute('as', 'style');
-    link.setAttribute('onload', "this.rel='stylesheet'");
+    link.setAttribute('rel', 'stylesheet');
     link.setAttribute('id', 'custom-font');
     document.querySelector('head')?.appendChild(link);
   }
 };
 
 const changeTheme = (pathname: string) => {
-  switch (pathname) {
-    case '/':
-      changeColor('/css/colors/grape.css', '/css/fonts/space.css');
-      break;
+  if (REAL_ESTATE_PAGES.includes(pathname)) {
+    changeColor('/css/colors/realestate.css', null);
+    return;
+  }
 
+  switch (pathname) {
     case '/demo-1':
       changeColor('/css/colors/yellow.css', '/css/fonts/thicccboi.css');
       break;
@@ -159,8 +157,7 @@ const changeTheme = (pathname: string) => {
       break;
 
     default:
-      changeColor();
-      return;
+      changeColor('/css/colors/realestate.css', null);
   }
 };
 

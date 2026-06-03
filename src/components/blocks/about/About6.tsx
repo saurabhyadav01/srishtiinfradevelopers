@@ -2,8 +2,9 @@ import { FC } from 'react';
 import Megaphone from 'icons/lineal/Megaphone';
 import { Tiles5 } from 'components/elements/tiles';
 import ListColumn from 'components/reuseable/ListColumn';
+import theme from 'data/theme';
 // -------- data -------- //
-import { aboutList2 } from 'data/about';
+import { aboutList2, aboutOverview, missionItems, visionItems } from 'data/about';
 
 const About6: FC = () => {
   return (
@@ -13,34 +14,38 @@ const About6: FC = () => {
         <div className="row g-4">
           {/* Mission Card */}
           <div className="col-12">
-            <div className="card h-100 border-0 shadow-sm" style={{ backgroundColor: '#f8fafc', borderRadius: '12px' }}>
+            <div className="card h-100 border-0 shadow-sm" style={{ backgroundColor: theme.bgSoft, borderRadius: '12px' }}>
               <div className="card-body p-5">
                 <div className="d-flex align-items-center mb-3">
-                  <div className="icon-badge me-3" style={{ width: '50px', height: '50px', backgroundColor: '#dbeafe', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                    <i className="uil uil-chart-line text-primary" style={{ fontSize: '20px' }}></i>
+                  <div className="icon-badge me-3" style={{ width: '50px', height: '50px', backgroundColor: 'rgba(26, 54, 93, 0.1)', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                    <i className="uil uil-chart-line" style={{ fontSize: '20px', color: theme.primary }}></i>
                   </div>
-                  <h4 className="mb-0" style={{ color: '#000000', fontSize: '1.25rem', fontWeight: '600' }}>Our Mission</h4>
+                  <h4 className="mb-0" style={{ color: theme.primaryDark, fontSize: '1.25rem', fontWeight: '600' }}>Our Mission</h4>
                 </div>
-                <p className="mb-0" style={{ color: '#000000', lineHeight: '1.6' }}>
-                  We are a group of technology enthusiasts who believe in designing and delivering innovative and scalable solutions that exceed our client's expectations.
-                </p>
+                <ul className="icon-list bullet-primary mb-0">
+                  {missionItems.map((item) => (
+                    <li key={item} style={{ color: theme.text, lineHeight: '1.6' }}>{item}</li>
+                  ))}
+                </ul>
               </div>
             </div>
           </div>
 
           {/* Vision Card */}
           <div className="col-12">
-            <div className="card h-100 border-0 shadow-sm" style={{ backgroundColor: '#f8fafc', borderRadius: '12px' }}>
+            <div className="card h-100 border-0 shadow-sm" style={{ backgroundColor: theme.bgSoft, borderRadius: '12px' }}>
               <div className="card-body p-5">
                 <div className="d-flex align-items-center mb-3">
-                  <div className="icon-badge me-3" style={{ width: '50px', height: '50px', backgroundColor: '#fef3c7', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                    <i className="uil uil-star text-warning" style={{ fontSize: '20px' }}></i>
+                  <div className="icon-badge me-3" style={{ width: '50px', height: '50px', backgroundColor: 'rgba(200, 169, 81, 0.2)', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                    <i className="uil uil-star" style={{ fontSize: '20px', color: theme.accentDark }}></i>
                   </div>
-                  <h4 className="mb-0" style={{ color: '#000000', fontSize: '1.25rem', fontWeight: '600' }}>Our Vision</h4>
+                  <h4 className="mb-0" style={{ color: theme.primaryDark, fontSize: '1.25rem', fontWeight: '600' }}>Our Vision</h4>
                 </div>
-                <p className="mb-0" style={{ color: '#000000', lineHeight: '1.6' }}>
-                  To be a valuable and trusted technology solutions partner to our clients. To garner a world-class reputation for quality, creativity, innovation, and commitment.
-                </p>
+                <ul className="icon-list bullet-primary mb-0">
+                  {visionItems.map((item) => (
+                    <li key={item} style={{ color: theme.text, lineHeight: '1.6' }}>{item}</li>
+                  ))}
+                </ul>
               </div>
             </div>
           </div>
@@ -51,14 +56,10 @@ const About6: FC = () => {
       <div className="col-lg-6 position-relative order-lg-2">
         <Megaphone className="icon-svg-md mb-4" />
 
-        <h2 className="display-4 mb-3" style={{ color: '#000000' }}>Who Are We?</h2>
+        <h2 className="display-4 mb-3" style={{ color: theme.primaryDark }}>Who Are We?</h2>
 
-        <p className="lead fs-lg mb-4" style={{ color: '#000000' }}>
-          A company driven by creativity, innovation, and strategic vision.
-        </p>
-
-        <p className="mb-6" style={{ color: '#000000' }}>
-          Enterprise-grade database and cloud solutions empowering global business infrastructure. We specialize in Oracle and Microsoft technologies, providing comprehensive cloud migration, managed services, and digital transformation solutions.
+        <p className="lead fs-lg mb-6" style={{ color: theme.text }}>
+          {aboutOverview}
         </p>
 
         <ListColumn rowClass="gx-xl-8" list={aboutList2} />

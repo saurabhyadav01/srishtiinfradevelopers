@@ -32,20 +32,9 @@ const Slide = ({ data }: ISlide) => {
                     </div>
                     <div className="clearfix"></div>
                     <div data-swiper-parallax="500" className={styles['slide-btns']}>
-  {cta.map((ct) => {
-    if (ct.type === "button") {
-      return (
-        <button key={ct.label}>{ct.label}</button>
-      );
-    }
-
-    return (
-      <Link href={ct.action} key={ct.label}>
-        {ct.label}
-      </Link>
-    );
-  })}
-</div>
+                      <Link href="/projects">Explore Projects</Link>
+                      <Link href="/about/contact">Book Site Visit</Link>
+                    </div>
 
                 </div>
             </div>

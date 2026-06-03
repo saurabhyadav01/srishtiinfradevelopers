@@ -4,6 +4,8 @@ import { Fragment } from 'react';
 import { Navbar } from 'components/blocks/navbar';
 import { Footer8 } from 'components/blocks/footer';
 import PageProgress from 'components/common/PageProgress';
+import SiteTopBar from 'components/common/SiteTopBar';
+import companyContact from 'data/contact';
 import NextLink from 'components/reuseable/links/NextLink';
 
 const ContactThree: NextPage = () => {
@@ -32,37 +34,20 @@ const ContactThree: NextPage = () => {
         {/* Locations strip */}
         <section className="wrapper bg-light">
           <div className="container py-6 py-md-8">
-            <div className="row g-4 g-lg-5 align-items-stretch">
-              <div className="col-md-6">
-                <div className="card h-100 shadow-sm border-0">
-                  <div className="card-body p-5">
-                    <h6 className="text-primary fw-semibold mb-2">USA</h6>
-                    <h5 className="mb-2">Srishti Infra Developers</h5>
-                    <p className="mb-3">56 Tisdale Drive, Dover, MA 02030, USA</p>
-                    <div className="d-flex align-items-center mb-2">
-                      <i className="uil uil-phone-volume text-primary me-2" />
-                      <span>+91&nbsp;99996&nbsp;25939</span>
-                    </div>
-                    <div className="d-flex align-items-center">
-                      <i className="uil uil-envelope text-primary me-2" />
-                      <a href="mailto:info@thissrishtiinfradevelopers.com">info@thissrishtiinfradevelopers.com</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="col-md-6">
+            <div className="row g-4 g-lg-5 justify-content-center">
+              <div className="col-md-8 col-lg-6">
                 <div className="card h-100 shadow-sm border-0">
                   <div className="card-body p-5">
                     <h6 className="text-primary fw-semibold mb-2">INDIA</h6>
-                    <h5 className="mb-2">Srishti Infra Developers</h5>
-                    <p className="mb-3">Sanskriti Garden, Roza Jalalpur, Greater Noida West</p>
+                    <h5 className="mb-2">{companyContact.name}</h5>
+                    <p className="mb-3">{companyContact.address}</p>
                     <div className="d-flex align-items-center mb-2">
                       <i className="uil uil-phone-volume text-primary me-2" />
-                      <span>+91&nbsp;99996&nbsp;25939</span>
+                      <a href={`tel:${companyContact.phoneTel}`}>{companyContact.phone}</a>
                     </div>
                     <div className="d-flex align-items-center">
                       <i className="uil uil-envelope text-primary me-2" />
-                      <a href="mailto:info@thissrishtiinfradevelopers.com">info@thissrishtiinfradevelopers.com</a>
+                      <a href={`mailto:${companyContact.email}`}>{companyContact.email}</a>
                     </div>
                   </div>
                 </div>
@@ -87,11 +72,11 @@ const ContactThree: NextPage = () => {
                 <div className="d-flex flex-column gap-2">
                   <div className="d-flex align-items-center">
                     <i className="uil uil-envelope text-primary me-2" />
-                    <a href="mailto:info@thissrishtiinfradevelopers.com">info@thissrishtiinfradevelopers.com</a>
+                    <a href={`mailto:${companyContact.email}`}>{companyContact.email}</a>
                   </div>
                   <div className="d-flex align-items-center">
                     <i className="uil uil-phone-volume text-primary me-2" />
-                    <span>India: +91 99996 25939</span>
+                    <a href={`tel:${companyContact.phoneTel}`}>{companyContact.phone}</a>
                   </div>
                 </div>
               </div>

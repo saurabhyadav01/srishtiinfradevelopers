@@ -1,30 +1,19 @@
 import { NextPage } from 'next';
 import { Fragment } from 'react';
 import PageProgress from 'components/common/PageProgress';
+import SiteTopBar from 'components/common/SiteTopBar';
 import { Navbar } from 'components/blocks/navbar';
 import { Footer8 } from 'components/blocks/footer';
-
-const latestImages: string[] = [
-  '/img/WhatsApp Image 2025-09-29 at 11.56.20.jpeg',
-  '/img/WhatsApp Image 2025-09-29 at 11.56.21.jpeg',
-  '/img/WhatsApp Image 2025-09-29 at 11.56.21 (1).jpeg',
-  '/img/WhatsApp Image 2025-09-29 at 11.56.21 (2).jpeg',
-  '/img/WhatsApp Image 2025-09-29 at 11.56.21 (3).jpeg',
-  '/img/WhatsApp Image 2025-09-29 at 11.56.22.jpeg',
-  '/img/WhatsApp Image 2025-09-29 at 11.56.22 (1).jpeg',
-  '/img/WhatsApp Image 2025-09-29 at 11.56.22 (2).jpeg',
-  '/img/WhatsApp Image 2025-10-04 at 13.39.11.jpeg',
-  '/img/WhatsApp Image 2025-10-04 at 13.39.12.jpeg',
-  '/img/WhatsApp Image 2025-10-04 at 13.39.12 (1).jpeg',
-  '/img/WhatsApp Image 2025-10-04 at 13.39.12 (2).jpeg',
-  '/img/WhatsApp Image 2025-10-04 at 13.39.13.jpeg'
-];
+import ProjectSection from 'components/blocks/projects/ProjectSection';
+import SectionIcon from 'components/blocks/projects/SectionIcon';
+import { runningProjects, deliveredProjects } from 'data/real-estate-projects';
 
 const ProjectsPage: NextPage = () => {
   return (
     <Fragment>
       <PageProgress />
-      <header className="wrapper mb-1">
+      <SiteTopBar />
+      <header className="wrapper mb-1" style={{ background: '#fff', boxShadow: '0 1px 0 rgba(0,0,0,0.06)' }}>
         <div className="container" style={{ maxWidth: '90%' }}>
           <Navbar social navClassName="navbar navbar-expand-lg center-nav navbar-light caret-none" />
         </div>
@@ -32,22 +21,48 @@ const ProjectsPage: NextPage = () => {
 
       <main className="content-wrapper">
         <section className="wrapper bg-soft-primary">
-          <div className="container pt-12 pt-md-14 pb-10" style={{ maxWidth: '90%' }}>
-            <div className="row mb-6">
-              <div className="col-lg-12 d-flex align-items-center">
-                <img src="/img/icons/lineal/portfolio.svg" alt="Projects Icon" width={28} height={28} className="me-2" />
-                <h1 className="mb-0">Projects</h1>
+          <div className="container pt-12 pt-md-14 pb-6" style={{ maxWidth: '90%' }}>
+            <div className="row mb-4">
+              <div className="col-lg-10">
+                <div className="d-flex align-items-center mb-3">
+                  <SectionIcon iconClass="uil uil-building" size={28} />
+                  <h1 className="mb-0 ms-3">Our Projects</h1>
+                </div>
+                <p className="lead mb-0">
+                  Explore our portfolio of residential and commercial developments across Noida, Greater Noida, and the NCR region.
+                </p>
               </div>
             </div>
 
-            <div className="row g-4">
-              {latestImages.map((src, idx) => (
-                <div key={idx} className="col-12 col-sm-6 col-lg-4">
-                  <div className="card border-0 shadow-sm h-100">
-                    <img className="card-img-top" src={encodeURI(src)} alt={`Project ${idx + 1}`} />
-                  </div>
-                </div>
-              ))}
+            <div className="d-flex flex-wrap gap-2 mb-2">
+              <a href="#running" className="btn btn-primary btn-sm rounded-pill">Running Projects</a>
+              <a href="#delivered" className="btn btn-outline-primary btn-sm rounded-pill">Delivered Projects</a>
+            </div>
+          </div>
+        </section>
+
+        <section className="wrapper bg-soft-primary">
+          <div className="container pb-10" style={{ maxWidth: '90%' }}>
+            <ProjectSection
+              id="running"
+              title="Our Running Projects"
+              subtitle="Currently under development — premium residential and commercial projects shaping the future of NCR real estate."
+              iconClass="uil uil-hard-hat"
+              projects={runningProjects}
+              bgClass="bg-light"
+              imageHeight={280}
+            />
+
+            <div className="mt-8">
+              <ProjectSection
+                id="delivered"
+                title="Our Delivered Projects"
+                subtitle="Successfully completed developments with happy families and thriving communities."
+                iconClass="uil uil-check-circle"
+                projects={deliveredProjects}
+                bgClass="bg-soft-primary"
+                imageHeight={280}
+              />
             </div>
           </div>
         </section>
@@ -59,5 +74,3 @@ const ProjectsPage: NextPage = () => {
 };
 
 export default ProjectsPage;
-
-

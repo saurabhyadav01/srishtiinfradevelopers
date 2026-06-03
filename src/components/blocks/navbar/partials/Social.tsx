@@ -1,18 +1,14 @@
+import companyContact from 'data/contact';
+
 const Social = () => {
   return (
     <li className="nav-item">
       <nav className="nav social social-muted justify-content-end text-end">
-        <a href="#" target="_blank" rel="noreferrer">
-          <i className="uil uil-twitter" />
-        </a>
-
-        <a href="#" target="_blank" rel="noreferrer">
-          <i className="uil uil-facebook-f" />
-        </a>
-
-        <a href="#" target="_blank" rel="noreferrer">
-          <i className="uil uil-instagram" />
-        </a>
+        {companyContact.socialLinks.map(({ id, icon, url, label }) => (
+          <a href={url} key={id} target="_blank" rel="noreferrer" aria-label={label} title={label}>
+            <i className={icon} />
+          </a>
+        ))}
       </nav>
     </li>
   );

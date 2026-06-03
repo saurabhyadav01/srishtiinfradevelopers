@@ -1,23 +1,26 @@
+import companyContact from 'data/contact';
+import { aboutOverview } from 'data/about';
+
 // used in the faq-1 block
 export const accordionList1 = [
   [
     {
       no: 'One',
       expand: false,
-      heading: 'What services does Srishti Infra Developers provide?',
-      body: `Srishti Infra Developers specializes in infrastructure development, cloud platforms, enterprise applications, and database management. We offer consulting, implementation, and managed services across Oracle, Microsoft, AWS, and Google Cloud technologies.`
+      heading: `What services does ${companyContact.name} provide?`,
+      body: `${companyContact.name} is an all-encompassing property owner, developer and manager. We specialize in residential plots, apartments, townships, and commercial developments across Noida and Greater Noida — handling land procurement, project planning, construction, sales, and customer handover.`
     },
     {
       no: 'Two',
       expand: false,
-      heading: 'How can I get started with your services?',
-      body: `You can contact us through our contact form or call us directly. We offer free initial consultations to understand your requirements and provide customized solutions that fit your business needs and budget.`
+      heading: 'How can I book a plot or apartment?',
+      body: `You can visit our office, call us directly, or fill out the contact form on our website. Our sales team will guide you through available projects, pricing, payment plans, and documentation requirements.`
     },
     {
       no: 'Three',
       expand: false,
-      heading: 'Do you provide 24/7 support?',
-      body: `Yes, we offer round-the-clock support for our managed services clients. Our support team is available 24/7 to ensure your systems run smoothly and address any issues promptly.`
+      heading: 'Are your projects RERA registered?',
+      body: `Yes, all our running projects are registered under RERA (Real Estate Regulatory Authority). We maintain full transparency in pricing, project timelines, and construction progress.`
     }
   ],
   [
@@ -25,19 +28,19 @@ export const accordionList1 = [
       no: 'Four',
       expand: false,
       heading: 'What is your typical project timeline?',
-      body: `Project timelines vary based on complexity and scope. Simple implementations can take 2-4 weeks, while complex enterprise solutions may require 3-6 months. We provide detailed project plans during the consultation phase.`
+      body: `Residential plot projects are typically delivered within 12–18 months. Apartment and township projects may take 24–36 months depending on scale. We provide regular construction updates and adhere to committed possession dates.`
     },
     {
       no: 'Five',
       expand: false,
-      heading: 'Do you work with small businesses?',
-      body: `Absolutely! We work with businesses of all sizes, from startups to large enterprises. Our solutions are scalable and can be tailored to meet the specific needs and budgets of small and medium businesses.`
+      heading: 'Do you offer home loan assistance?',
+      body: `Yes, we have tie-ups with leading banks and NBFCs. Our team helps you with loan documentation, approval process, and EMI planning to make your purchase smooth and hassle-free.`
     },
     {
       no: 'Six',
       expand: false,
-      heading: 'What makes Srishti Infra Developers different?',
-      body: `Our deep expertise in infrastructure and enterprise systems, partnerships with leading cloud providers, and a proven delivery record set us apart. We focus on measurable outcomes and long-term client success.`
+      heading: `What makes ${companyContact.name} different?`,
+      body: `${aboutOverview} We deliver prime locations, excellent construction quality, on-time handover, and personal customer relationships built on trust, integrity and transparency.`
     }
   ]
 ];

@@ -1,293 +1,188 @@
 import { NextPage } from 'next';
 import { Fragment } from 'react';
-// -------- custom component -------- //
-
-import { Team3, Team6, Team8 } from 'components/blocks/team';
 import Link from 'next/link';
-import { Hero15 } from 'components/blocks/hero';
 import { About6 } from 'components/blocks/about';
-import { Facts5 } from 'components/blocks/facts';
 import { Navbar } from 'components/blocks/navbar';
-import { Footer8, Footer9 } from 'components/blocks/footer';
-import { Process7 } from 'components/blocks/process';
-import { Contact7, Contact9 } from 'components/blocks/contact';
-import { CTA5 } from 'components/blocks/call-to-action';
-import { Testimonial5 } from 'components/blocks/testimonial';
-import { Blog6 } from 'components/blocks/blog';
+import { Footer8 } from 'components/blocks/footer';
 import PageProgress from 'components/common/PageProgress';
-import Slider from 'components/blocks/home/slider';
-import Partners from 'components/blocks/home/partners';
-import Partner1 from 'components/blocks/home/partners/partnar';
-import BlockLayout from 'components/layouts/BlockLayout';
-import CodeHighlight from 'components/reuseable/CodeHighlight';
+import WhatsAppFloat from 'components/common/WhatsAppFloat';
+import SiteTopBar from 'components/common/SiteTopBar';
+import HomeHeroBanner from 'components/blocks/home/HomeHeroBanner';
+import HomeFeaturedProperties from 'components/blocks/home/HomeFeaturedProperties';
+import HomeContactSection from 'components/blocks/home/HomeContactSection';
+import HomeStats from 'components/blocks/home/HomeStats';
+import HomeProcess from 'components/blocks/home/HomeProcess';
+import HomeFeaturedProject from 'components/blocks/home/HomeFeaturedProject';
+import HomeInquiryBanner from 'components/blocks/home/HomeInquiryBanner';
+import HomeSectionHeader from 'components/blocks/home/HomeSectionHeader';
+import ProjectSection from 'components/blocks/projects/ProjectSection';
 import * as All from 'components/blocks/services';
 import * as Alls from 'components/blocks/faq';
-import * as Allss from 'components/blocks/contact';
 import { fadeInAnimate } from 'utils/animation';
+import { runningProjects, deliveredProjects, realEstateServices } from 'data/real-estate-projects';
+import companyContact from 'data/contact';
+import theme from 'data/theme';
 
-const Demo15: NextPage = () => {
-  const moreProjectImages: string[] = [
-    '/img/WhatsApp Image 2025-09-29 at 11.56.20.jpeg',
-    '/img/WhatsApp Image 2025-09-29 at 11.56.21.jpeg',
-    '/img/WhatsApp Image 2025-09-29 at 11.56.21 (1).jpeg',
-    '/img/WhatsApp Image 2025-09-29 at 11.56.21 (2).jpeg',
-    '/img/WhatsApp Image 2025-09-29 at 11.56.21 (3).jpeg',
-    '/img/WhatsApp Image 2025-09-29 at 11.56.22.jpeg',
-    '/img/WhatsApp Image 2025-09-29 at 11.56.22 (1).jpeg',
-    '/img/WhatsApp Image 2025-09-29 at 11.56.22 (2).jpeg'
-  ];
-  const whatWeDoFeatures = [
-    {
-      title: '24/7 Support',
-      description:
-        'Get assistance anytime with our dedicated support team, ready to help you resolve issues and answer questions around the clock.'
-    },
-    {
-      title: 'Secure Payments',
-      description:
-        'Get assistance anytime with our dedicated support team, ready to help you resolve issues and answer questions around the clock.'
-    },
-    {
-      title: 'Daily Updates',
-      description:
-        'Get assistance anytime with our dedicated support team, ready to help you resolve issues and answer questions around the clock.'
-    },
-    {
-      title: 'Market Research',
-      description:
-        'Get assistance anytime with our dedicated support team, ready to help you resolve issues and answer questions around the clock.'
-    }
-  ];
-  
-  
+
+const HomePage: NextPage = () => {
   return (
     <Fragment>
-      <style jsx>{`
-        .tech-card:hover, .app-card:hover {
-          transform: translateY(-8px);
-          box-shadow: 0 20px 40px rgba(0,0,0,0.15) !important;
+      <style jsx global>{`
+        .home-page-nav .nav-link {
+          font-weight: 500;
+          text-transform: uppercase;
+          font-size: 0.9rem;
+          letter-spacing: 0.02em;
         }
-        /* Remove animated borders from homepage cards */
-        .icon-badge {
-          transition: all 0.3s ease;
+        .home-page-nav .nav-link[href='/'],
+        .home-page-nav a[href='/'].nav-link {
+          color: #c45c4c !important;
+          border-bottom: 2px solid #c45c4c;
         }
-        /* Animated border utility for headings/containers */
-        .animated-border {
-          position: relative;
+        .home-header {
+          background: #fff;
+          box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
         }
-        .animated-border::after {
-          content: '';
-          position: absolute;
-          left: -10px; right: -10px; top: -8px; bottom: -8px;
-          border-radius: 14px;
-          z-index: -1;
-          background: conic-gradient(from 0deg, #17203f, #0ea5e9, #8b5cf6, #10b981, #17203f);
-          animation: border-rotate 6s linear infinite;
-          -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-          -webkit-mask-composite: xor;
-                  mask-composite: exclude;
-          padding: 2px;
+        .home-card {
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-        .icon-badge:hover {
-          transform: scale(1.1);
+        .home-card:hover {
+          transform: translateY(-4px);
+          box-shadow: 0 16px 40px rgba(26, 54, 93, 0.12) !important;
         }
-        @keyframes float {
-          0%, 100% { transform: translateY(0px); }
-          50% { transform: translateY(-10px); }
+        .service-item {
+          padding: 16px;
+          border-radius: 12px;
+          transition: background 0.2s ease;
         }
-        @keyframes pulse {
-          0% { transform: scale(1); opacity: 1; }
-          50% { transform: scale(1.05); opacity: 0.8; }
-          100% { transform: scale(1); opacity: 1; }
+        .service-item:hover {
+          background: rgba(200, 169, 81, 0.08);
         }
-        @keyframes rotate {
-          from { transform: rotate(0deg); }
-          to { transform: rotate(360deg); }
+        @keyframes homeSlideUp {
+          from {
+            opacity: 0;
+            transform: translateY(28px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
         }
-        @keyframes bounce {
-          0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-          40% { transform: translateY(-10px); }
-          60% { transform: translateY(-5px); }
-        }
-        .floating-icon {
-          animation: float 6s ease-in-out infinite;
-        }
-        .pulse-icon {
-          animation: pulse 3s ease-in-out infinite;
-        }
-        .rotate-icon {
-          animation: rotate 8s linear infinite;
-        }
-        .bounce-icon {
-          animation: bounce 2s infinite;
-        }
-        .tech-bg {
-          background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 50%, #cbd5e1 100%);
-          position: relative;
-          overflow: hidden;
-        }
-        .tech-bg::before {
-          content: '';
-          position: absolute;
-          top: 0;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          background-image: 
-            radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
-            radial-gradient(circle at 80% 20%, rgba(16, 185, 129, 0.1) 0%, transparent 50%),
-            radial-gradient(circle at 40% 40%, rgba(139, 92, 246, 0.1) 0%, transparent 50%);
-          z-index: 1;
-        }
-        .tech-bg > * {
-          position: relative;
-          z-index: 2;
+        .home-animate-section {
+          animation: homeSlideUp 0.75s ease forwards;
         }
       `}</style>
+
       <PageProgress />
+      <SiteTopBar />
 
-      {/* ========== header ========== */}
-      
-       <header className="wrapper mb-1">
-        <div className="container" style={{ maxWidth: '90%' }}>
-          <Navbar social navClassName="navbar navbar-expand-lg center-nav navbar-light caret-none" />
+      <header className="home-header wrapper mb-0">
+        <div className="container py-2" style={{ maxWidth: '95%' }}>
+          <div className="home-page-nav">
+            <Navbar social navClassName="navbar navbar-expand-lg center-nav navbar-light caret-none py-2" />
+          </div>
         </div>
-       </header>
-      {/* ========== main content ========== */}
-      <main className="content-wrapper ">
-        {/* ========== hero sections ========== */}
-        <Slider />
+      </header>
 
-        <section className="wrapper bg-soft-primary angled lower-end tech-bg">
-          {/* Floating Tech Icons */}
-         
-          <div className="position-absolute floating-icon" style={{ top: '20%', right: '8%', zIndex: 1, opacity: 0.1, animationDelay: '2s' }}>
-            <svg width="35" height="35" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="12" cy="12" r="10" stroke="#10b981" strokeWidth="2"/>
-              <path d="M8 12L11 15L16 9" stroke="#10b981" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
-          </div>
-          <div className="position-absolute floating-icon" style={{ bottom: '15%', left: '10%', zIndex: 1, opacity: 0.1, animationDelay: '4s' }}>
-            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="3" y="3" width="18" height="18" rx="2" ry="2" stroke="#8b5cf6" strokeWidth="2"/>
-              <path d="M9 9H15V15H9V9Z" stroke="#8b5cf6" strokeWidth="2"/>
-            </svg>
-          </div>
-          <div className="position-absolute floating-icon" style={{ bottom: '25%', right: '5%', zIndex: 1, opacity: 0.1, animationDelay: '1s' }}>
-            <svg width="25" height="25" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="#f59e0b" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
-          </div>
+      <main className="content-wrapper">
+        <HomeHeroBanner />
+        <div className="home-animate-section">
+          <HomeFeaturedProperties />
+        </div>
+        <div className="home-animate-section" style={{ animationDelay: '0.1s' }}>
+          <HomeContactSection />
+        </div>
+        <div className="home-animate-section" style={{ animationDelay: '0.15s' }}>
+          <HomeStats />
+        </div>
 
-          <div className="container py-6 py-md-8" style={{ maxWidth: '90%' }}>
-            <div className="row mb-6" style={fadeInAnimate('0ms')}>
-              <div className="col-lg-12 d-flex align-items-center">
-                <div className="icon-badge me-3 icon-animate pulse-icon" style={{ backgroundColor: '#17203f', padding: '12px', borderRadius: '12px' }}>
-                  <img src="/img/icons/lineal/rocket.svg" alt="About Icon" width={24} height={24} style={{ filter: 'invert(1)', opacity: 0.95 }} />
-                </div>
-                <h2 className="mb-0 animate-fade-up" style={{ animationDelay: '200ms' }}>About Srishti Infra Developers</h2>
-              </div>
-            </div>
-            <div style={fadeInAnimate('400ms')}>
+        <section className="wrapper bg-soft-primary angled lower-end realestate-bg">
+          <div className="container py-10 py-md-12" style={{ maxWidth: '90%' }}>
+            <div style={fadeInAnimate('0ms')}>
+              <HomeSectionHeader
+                label="Who We Are"
+                title={`About ${companyContact.name}`}
+                subtitle="Founded in 2002 — a leading property owner, developer and manager across Noida and Greater Noida."
+                iconClass="uil uil-estate"
+              />
               <About6 />
             </div>
 
-        
-
-            {/* ========== upcoming projects section ========== */}
-            <section className="wrapper bg-light rounded-3 mt-10" style={{ boxShadow: '0 10px 30px rgba(0,0,0,0.06)' }}>
-              <div className="container py-8 py-md-10" style={{ maxWidth: '100%' }}>
-                <div className="row mb-6 align-items-center" style={fadeInAnimate('200ms')}>
-                  <div className="col-lg-12 d-flex align-items-center">
-                    <div className="icon-badge me-3 icon-animate" style={{ backgroundColor: '#17203f', padding: '12px', borderRadius: '12px' }}>
-                      <img src="/img/icons/lineal/photo.svg" alt="Upcoming Projects Icon" width={24} height={24} style={{ filter: 'invert(1)', opacity: 0.95 }} />
-                    </div>
-                    <h2 className="mb-0">Upcoming Projects</h2>
-                  </div>
-                </div>
-
-                <div className="row g-4" style={fadeInAnimate('400ms')}>
-                  <div className="col-12 col-sm-6 col-lg-4">
-                    <div className="card border-0 shadow-sm h-100">
-                      <img className="card-img-top" src={encodeURI('/img/WhatsApp Image 2025-10-04 at 13.39.11.jpeg')} alt="Upcoming project 1" />
-                    </div>
-                  </div>
-                  <div className="col-12 col-sm-6 col-lg-4">
-                    <div className="card border-0 shadow-sm h-100">
-                      <img className="card-img-top" src={encodeURI('/img/WhatsApp Image 2025-10-04 at 13.39.12.jpeg')} alt="Upcoming project 2" />
-                    </div>
-                  </div>
-                  <div className="col-12 col-sm-6 col-lg-4">
-                    <div className="card border-0 shadow-sm h-100">
-                      <img className="card-img-top" src={encodeURI('/img/WhatsApp Image 2025-10-04 at 13.39.12 (1).jpeg')} alt="Upcoming project 3" />
-                    </div>
-                  </div>
-                  <div className="col-12 col-sm-6 col-lg-6">
-                    <div className="card border-0 shadow-sm h-100">
-                      <img className="card-img-top" src={encodeURI('/img/WhatsApp Image 2025-10-04 at 13.39.12 (2).jpeg')} alt="Upcoming project 4" />
-                    </div>
-                  </div>
-                  <div className="col-12 col-sm-6 col-lg-6">
-                    <div className="card border-0 shadow-sm h-100">
-                      <img className="card-img-top" src={encodeURI('/img/WhatsApp Image 2025-10-04 at 13.39.13.jpeg')} alt="Upcoming project 5" />
-                    </div>
-                  </div>
-                </div>
+            <div className="mt-12" style={fadeInAnimate('200ms')}>
+              <ProjectSection
+                id="running"
+                title="Our Running Projects"
+                subtitle="Active developments across Noida Extension and Greater Noida West — including Sanskriti Villas, Sanskriti Kunj Garden, and more."
+                iconClass="uil uil-hard-hat"
+                projects={runningProjects}
+                bgClass="bg-light"
+                imageHeight={320}
+              />
+              <div className="text-center pt-2 pb-4">
+                <Link href="/projects#running" className="btn btn-accent rounded-pill px-4">
+                  View All Running Projects
+                </Link>
               </div>
-            </section>
+            </div>
 
-            {/* ========== more projects (additional images) ========== */}
-            <section className="wrapper bg-soft-primary rounded-3 mt-8">
-              <div className="container py-8 py-md-10" style={{ maxWidth: '100%' }}>
-                <div className="row mb-6 align-items-center" style={fadeInAnimate('200ms')}>
-                  <div className="col-lg-12 d-flex align-items-center">
-                    <div className="icon-badge me-3 icon-animate" style={{ backgroundColor: '#17203f', padding: '12px', borderRadius: '12px' }}>
-                      <img src="/img/icons/lineal/gallery.svg" alt="More Projects Icon" width={24} height={24} style={{ filter: 'invert(1)', opacity: 0.95 }} />
-                    </div>
-                    <h2 className="mb-0">More Projects</h2>
-                  </div>
-                </div>
-                <div className="row g-4" style={fadeInAnimate('400ms')}>
-                  {moreProjectImages.map((src, index) => (
-                    <div key={index} className="col-12 col-sm-6 col-lg-4">
-                      <div className="card border-0 shadow-sm h-100">
-                        <img className="card-img-top" src={encodeURI(src)} alt={`More project ${index + 1}`} />
-                      </div>
-                    </div>
-                  ))}
-                </div>
+            <div className="mt-6" style={fadeInAnimate('300ms')}>
+              <ProjectSection
+                id="delivered"
+                title="Our Delivered Projects"
+                subtitle="Successfully completed developments with families already living in thriving communities."
+                iconClass="uil uil-check-circle"
+                projects={deliveredProjects}
+                bgClass="bg-white"
+                imageHeight={280}
+              />
+              <div className="text-center pt-2 pb-4">
+                <Link href="/projects#delivered" className="btn btn-outline-primary rounded-pill px-4">
+                  View All Delivered Projects
+                </Link>
               </div>
-            </section>
-            {/* What We Do? section */}
-            <div className="row mt-10" style={fadeInAnimate('400ms')}>
-              <div className="col-lg-7 mb-4 mb-lg-0">
-                <div className="card shadow-sm border-0 h-100">
+            </div>
+
+            <div className="row mt-12 g-4" style={fadeInAnimate('400ms')}>
+              <div className="col-lg-7">
+                <div className="card home-card shadow-sm border-0 h-100 overflow-hidden">
                   <img
                     className="card-img-top"
-                    src={encodeURI('/img/WhatsApp Image 2025-10-04 at 13.39.13.jpeg')}
-                    alt="What We Do - Srishti Infra"
+                    src={encodeURI('/img/projects/WhatsApp Image 2026-05-31 at 18.30.13.jpeg')}
+                    alt="Sanskriti Villas — Greater Noida West"
+                    style={{ minHeight: '440px', objectFit: 'cover' }}
                   />
                 </div>
               </div>
               <div className="col-lg-5">
-                <div className="card h-100 shadow-sm border-0">
-                  <div className="card-body d-flex flex-column justify-content-center">
-                    <h3 className="mb-3">What We Do?</h3>
-                    <p className="mb-4">
-                      The full service we are offering is specifically designed to meet your business needs and projects.
+                <div className="card home-card h-100 shadow-sm border-0 bg-white">
+                  <div className="card-body d-flex flex-column justify-content-center p-5">
+                    <span className="section-label">What We Do</span>
+                    <h3 className="mb-3" style={{ color: theme.primaryDark, fontWeight: 700 }}>
+                      Complete Real Estate Development
+                    </h3>
+                    <p className="mb-4" style={{ color: theme.textMuted, lineHeight: 1.7 }}>
+                      From land procurement to possession handover — we manage every stage with transparency, quality, and customer trust.
                     </p>
-                    <div className="d-flex flex-column" style={{ gap: '18px' }}>
-                      {whatWeDoFeatures.map(({ title, description }) => (
-                        <div key={title} className="d-flex align-items-start">
+                    <div className="d-flex flex-column" style={{ gap: '8px' }}>
+                      {realEstateServices.map(({ title, description }) => (
+                        <div key={title} className="service-item d-flex align-items-start">
                           <div
-                            className="me-3 d-flex align-items-center justify-content-center"
-                            style={{ width: '40px', height: '40px', borderRadius: '12px', backgroundColor: '#17203f' }}
+                            className="me-3 d-flex align-items-center justify-content-center flex-shrink-0"
+                            style={{
+                              width: '42px',
+                              height: '42px',
+                              borderRadius: '12px',
+                              background: theme.gradientHero,
+                              border: `2px solid ${theme.accent}`
+                            }}
                           >
-                            <i className="uil uil-check text-white" />
+                            <i className="uil uil-check" style={{ color: theme.accentLight }} />
                           </div>
                           <div>
-                            <h5 className="mb-1" style={{ fontWeight: 600 }}>{title}</h5>
-                            <p className="mb-0" style={{ color: '#4a5568' }}>{description}</p>
+                            <h6 className="mb-1" style={{ fontWeight: 600, color: theme.primaryDark }}>{title}</h6>
+                            <p className="mb-0" style={{ color: theme.textMuted, fontSize: '0.9rem', lineHeight: 1.6 }}>
+                              {description}
+                            </p>
                           </div>
                         </div>
                       ))}
@@ -296,169 +191,44 @@ const Demo15: NextPage = () => {
                 </div>
               </div>
             </div>
-            {/* Partner ecosystem section removed per request */}
-
-            {/* Application technology spotlight removed per request */}
-           
-        
-           
-             
- 
-            {/* ========== process section ========== */}
-            {/* <Process7 /> */}
           </div>
         </section>
-        {/* Srishti Infra: Featured Video & Brochure (restored) */}
-        <section className="wrapper bg-light">
-          <div className="container py-8 py-md-10" style={{ maxWidth: '90%' }}>
-            <div className="row mt-2" style={fadeInAnimate('200ms')}>
-              <div className="col-lg-7">
-                <div className="card shadow-sm border-0">
-                  <div className="card-body p-0">
-                    <video controls style={{ width: '100%', height: 'auto', borderRadius: '0.5rem' }} poster="/img/logo.jpg">
-                      <source src="/img/N-237 Srishti Infra Plots Sector 12 Noida Video.mp4" type="video/mp4" />
-                      Your browser does not support the video tag.
-                    </video>
-                  </div>
-                </div>
-              </div>
-              <div className="col-lg-5 mt-4 mt-lg-0">
-                <div className="card h-100 shadow-sm border-0">
-                  <div className="card-body d-flex flex-column justify-content-center">
-                    <h3 className="mb-3">Srishti Infra Developers Brochure</h3>
-                    <p className="mb-4">Download our latest designs and offering details.</p>
-                    <a className="btn btn-primary" href="/img/Designs.pdf" target="_blank" rel="noreferrer">View / Download PDF</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      {/* ========== process section ==========    */}
 
-      {/* <div className="pt-10 pt-md-12 pb-10 pb-md-12">
-        <div className="container" style={{ maxWidth: '90%' }}>
-          <div className="row mb-6">
-            <div className="col-lg-12 d-flex align-items-center animate-fade-up">
-              <img src="/img/icons/lineal/tools.svg" alt="Services Icon" width={28} height={28} className="me-2" />
-              <h2 className="mb-0">Our Services</h2>
-            </div>
-          </div>
-          <All.Services1 />
+        <HomeProcess />
+        <HomeFeaturedProject />
 
-          
-        </div>
-      </div> */}
-
-        {/* Brand logos / partners strip removed to avoid duplication */}
-
-
-        <section className="wrapper bg-soft-primary">
-          <div className="container pt-12 pt-md-14 pb-13 pb-md-15 mb-n15" style={{ maxWidth: '90%' }}>
-            <div className="row mb-6">
-              <div className="col-lg-12 d-flex align-items-center animate-fade-up">
-                <img src="/img/icons/lineal/briefcase.svg" alt="Solutions Icon" width={28} height={28} className="me-2" />
-                <h2 className="mb-0">Solutions</h2>
-              </div>
-            </div>
+        <section className="wrapper bg-white">
+          <div className="container py-12 py-md-14" style={{ maxWidth: '90%' }}>
+            <HomeSectionHeader
+              label="Our Expertise"
+              title="Our Services"
+              subtitle="End-to-end real estate services tailored for homebuyers, investors, and landowners across NCR."
+              iconClass="uil uil-briefcase"
+            />
             <All.Services8 />
           </div>
         </section>
-  {/* contact section removed per request */}
 
-        {/* testimonial section removed per request */}
-
-        {/* ========== team section ========== */}
-
-
-        {/* ========== facts section ========== */}
-        {/* <Facts5 /> */}
-
-        {/* ========== contact section ========== */}
-        {/* <Contact7 /> */}
-
-        {/* ========== call to action section ========== */}
-    
-      </main>
-      {/* <section className="wrapper bg-light">
-        <div className="container py-12 py-md-14" style={{ maxWidth: '90%' }}>
-          <div className="row mb-6">
-            <div className="col-lg-12 d-flex align-items-center animate-fade-up">
-              <img src="/img/icons/lineal/team.svg" alt="Team Icon" width={28} height={28} className="me-2" />
-              <h2 className="mb-0">Our Team</h2>
-            </div>
-          </div>
-          <Team8 />
-        </div>
-      </section> */}
-       
-       
-        <section className="wrapper bg-soft-primary">
-          <div className="container pt-15 pt-md-17 pb-13 pb-md-15 mb-lg-n22 mb-xl-n24" style={{ maxWidth: '90%' }}>
-            <div className="row mb-6">
-              <div className="col-lg-12 d-flex align-items-center animate-fade-up">
-                <img src="/img/icons/lineal/startup.svg" alt="Case Studies Icon" width={28} height={28} className="me-2" />
-                <h2 className="mb-0">Case Studies</h2>
-              </div>
-            </div>
-            <All.Services9 />
-          </div>
-        </section>
-
-        {/* ========== latest insights / blog ========== */}
-        {/* Insights section linking to Technology removed per request */}
-        <section className="wrapper bg-light tech-bg">
-          {/* Floating Tech Icons for FAQ Section */}
-          <div className="position-absolute floating-icon" style={{ top: '10%', left: '5%', zIndex: 1, opacity: 0.08, animationDelay: '1s' }}>
-           
-          </div>
-          <div className="position-absolute floating-icon" style={{ top: '30%', right: '8%', zIndex: 1, opacity: 0.08, animationDelay: '3s' }}>
-            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="12" cy="12" r="10" stroke="#10b981" strokeWidth="2"/>
-              <path d="M8 12L11 15L16 9" stroke="#10b981" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
-          </div>
-          <div className="position-absolute floating-icon" style={{ bottom: '15%', left: '10%', zIndex: 1, opacity: 0.08, animationDelay: '5s' }}>
-            <svg width="35" height="35" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="3" y="3" width="18" height="18" rx="2" ry="2" stroke="#8b5cf6" strokeWidth="2"/>
-              <path d="M9 9H15V15H9V9Z" stroke="#8b5cf6" strokeWidth="2"/>
-            </svg>
-          </div>
-
-          <div className="container pt-15 pt-md-17 pb-13 pb-md-15" style={{ maxWidth: '90%' }}>
-            <div className="row mb-6">
-              <div className="col-lg-12 d-flex align-items-center">
-                <div className="icon-badge me-3 icon-animate bounce-icon" style={{ backgroundColor: '#17203f', padding: '12px', borderRadius: '12px' }}>
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="12" cy="12" r="10" stroke="white" strokeWidth="2"/>
-                    <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    <path d="M12 17h.01" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </div>
-               
-              </div>
-            </div>
+        <section className="wrapper bg-soft-primary realestate-bg">
+          <div className="container py-12 py-md-14" style={{ maxWidth: '90%' }}>
+            <HomeSectionHeader
+              label="Got Questions?"
+              title="Frequently Asked Questions"
+              subtitle={`Everything you need to know about buying property with ${companyContact.name}.`}
+              iconClass="uil uil-question-circle"
+              centered
+            />
             <Alls.FAQ1 />
           </div>
         </section>
-        {/* <div className="pb-13 pb-md-15">
-          <Allss.Contact12 />
-        </div> */}
-        <section className="wrapper bg-soft-primary">
-          <div className="container py-12 py-md-14" style={{ maxWidth: '90%' }}>
-            <div className="row mb-6">
-              <div className="col-lg-12 d-flex align-items-center">
-                <img src="/img/icons/lineal/megaphone.svg" alt="CTA Icon" width={28} height={28} className="me-2" />
-                <h2 className="mb-0">Ready to Start?</h2>
-              </div>
-            </div>
-            <CTA5 />
-          </div>
-        </section>
-      {/* ========== footer section ========== */}
+
+        <HomeInquiryBanner />
+      </main>
+
       <Footer8 />
+      <WhatsAppFloat />
     </Fragment>
   );
 };
 
-export default Demo15;
+export default HomePage;

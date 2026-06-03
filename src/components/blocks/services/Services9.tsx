@@ -17,13 +17,13 @@ const Services9: FC = () => {
       </div>
 
       <div className="col-lg-5">
-        <h2 className="fs-15 text-uppercase text-muted mb-3">What We Do?</h2>
-        <h3 className="display-4 mb-5">The service we offer is specifically designed to meet your needs.</h3>
+        <h2 className="fs-15 text-uppercase text-muted mb-3">Why Choose Us</h2>
+        <h3 className="display-4 mb-5">Building trust through quality, transparency, and timely delivery.</h3>
         <p>
-        Our team is composed of experienced professionals who are passionate about delivering exceptional results.
-        Each member brings unique skills and a commitment to excellence in everything we do.
+          With over two decades in Noida and NCR real estate, we have delivered residential plots, apartments,
+          and commercial spaces that families and investors trust. Every project reflects our commitment to excellence.
         </p>
-        <NextLink title="More Details" href="#" className="btn btn-navy rounded-pill mt-3" />
+        <NextLink title="View Our Projects" href="/projects" className="btn btn-navy rounded-pill mt-3" />
       </div>
     </div>
   );

@@ -1,0 +1,65 @@
+.heroSlider :global(.swiper-pagination-bullet) {
+  width: 10px;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.5);
+  opacity: 1;
+}
+
+.heroSlider :global(.swiper-pagination-bullet-active) {
+  background: #c8a951;
+  width: 28px;
+  border-radius: 5px;
+}
+
+.heroSlider :global(.swiper-button-prev),
+.heroSlider :global(.swiper-button-next) {
+  color: #fff;
+  width: 44px;
+  height: 44px;
+  border: 2px solid rgba(255, 255, 255, 0.85);
+  border-radius: 50%;
+  background: rgba(15, 36, 64, 0.35);
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.heroSlider :global(.swiper-button-prev):hover,
+.heroSlider :global(.swiper-button-next):hover {
+  background: rgba(200, 169, 81, 0.9);
+  border-color: #c8a951;
+}
+
+.heroSlider :global(.swiper-button-prev::after),
+.heroSlider :global(.swiper-button-next::after) {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.slideBg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transform: scale(1.05);
+  transition: transform 6s ease;
+}
+
+.heroSlider :global(.swiper-slide-active) .slideBg {
+  transform: scale(1);
+}
+
+.slideOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(15, 36, 64, 0.55) 0%, rgba(15, 36, 64, 0.35) 100%);
+}
+
+.slideContent {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.7s ease 0.15s, transform 0.7s ease 0.15s;
+}
+
+.heroSlider :global(.swiper-slide-active) .slideContent {
+  opacity: 1;
+  transform: translateY(0);
+}

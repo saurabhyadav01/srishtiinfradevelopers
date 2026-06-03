@@ -27,6 +27,7 @@ import {
   documentionNavigation,
   partner,about, portfolio,Careers,
 } from 'data/navigation';
+import companyContact from 'data/contact';
 
 // ===================================================================
 type NavbarProps = {
@@ -70,7 +71,7 @@ const Navbar: FC<NavbarProps> = (props) => {
       <div className="navbar-brand w-100">
         <NextLink href="/" title={<img alt="logo" width={180}src={`/img/logo.jpg`}  />} />
         <br></br>
-        <span className='marginTop:-10'><b>Srishti Infra & Developers</b></span>
+        <span className='marginTop:-10'><b>{companyContact.name}</b></span>
       </div>
 
       <div id="offcanvas-nav" data-bs-scroll="true" className="navbar-collapse offcanvas offcanvas-nav offcanvas-start">
@@ -84,11 +85,13 @@ const Navbar: FC<NavbarProps> = (props) => {
                   <li className="nav-item">
               <ListItemLink title={'HOME'} href="/" linkClassName="nav-link" />
             </li>
-                 <li className="nav-item">
-              <ListItemLink title={'PROJECTS'} href="/projects" linkClassName="nav-link" />
-            </li>
-            <li className="nav-item">
-              <ListItemLink title={'PORTFOLIO'} href="/projects" linkClassName="nav-link" />
+            <li className="nav-item dropdown">
+              <DropdownToggleLink title="PROJECTS" className="nav-link dropdown-toggle" />
+              <ul className="dropdown-menu">
+                <ListItemLink href="/projects" title="All Projects" linkClassName="dropdown-item" />
+                <ListItemLink href="/projects#running" title="Running Projects" linkClassName="dropdown-item" />
+                <ListItemLink href="/projects#delivered" title="Delivered Projects" linkClassName="dropdown-item" />
+              </ul>
             </li>
             <li className="nav-item">
               <ListItemLink title={'ABOUT US'} href="/about" linkClassName="nav-link" />
@@ -110,9 +113,9 @@ const Navbar: FC<NavbarProps> = (props) => {
           {/* ============= show contact info in the small device sidebar ============= */}
           <div className="offcanvas-footer d-lg-none">
             <div>
-              <NextLink title="info@email.com" className="link-inverse" href="mailto:first.last@email.com" />
+              <NextLink title={companyContact.email} className="link-inverse" href={`mailto:${companyContact.email}`} />
               <br />
-              <NextLink href="tel:+919999625939" title="+91 99996 25939" />
+              <NextLink href={`tel:${companyContact.phoneTel}`} title={companyContact.phone} />
               <br />
               <SocialLinks />
             </div>

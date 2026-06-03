@@ -2,6 +2,7 @@ import { FC, Fragment, ReactElement, ReactNode } from 'react';
 import { useRouter } from 'next/router';
 import { Navbar } from 'components/blocks/navbar';
 import PageProgress from 'components/common/PageProgress';
+import SiteTopBar from 'components/common/SiteTopBar';
 import NextLink from 'components/reuseable/links/NextLink';
 
 // ====================================================
@@ -40,10 +41,11 @@ const BlockLayout: FC<BlockLayoutProps> = ({ title, children }) => {
   return (
     <Fragment>
       <PageProgress />
+      <SiteTopBar />
 
       <div className="content-wrapper">
         {/* ========== header ========== */}
-        <header className="wrapper mb-1">
+        <header className="wrapper mb-1" style={{ background: '#fff', boxShadow: '0 1px 0 rgba(0,0,0,0.06)' }}>
         <Navbar social navClassName="navbar navbar-expand-lg center-nav transparent navbar-light caret-none" />
        </header>
 

@@ -15,16 +15,16 @@ const Services8: FC = () => {
       <div className="col-lg-6">
         <h2 className="display-4 mb-3">What We Do?</h2>
         <p className="lead fs-lg mb-8 pe-xxl-2">
-          The full service we are offering is <span className="underline">specifically</span> designed to meet your
-          business needs and projects.
+          Complete real estate development services — from <span className="underline">land acquisition</span> to
+          possession handover across Noida and NCR.
         </p>
 
         <div className="row gx-xl-10 gy-6">
-          {serviceList2.map(({ title, id, icon }) => (
+          {serviceList2.map(({ title, id, icon, description }) => (
             <div className="col-md-6 col-lg-12 col-xl-6" key={id}>
               <ServiceCard3
                 title={title}
-                description="Get assistance anytime with our dedicated support team, ready to help you resolve issues and answer questions around the clock."
+                description={description}
                 Icon={<IconBox icon={icon} className="icon btn btn-circle btn-lg btn-soft-primary pe-none me-5" />}
               />
             </div>

@@ -17,8 +17,8 @@ const Slide6 = () => {
           </div>
           <div className="clearfix"></div>
           <div data-swiper-parallax="500" className={styles['slide-btns']}>
-            <Link href="/contact">
-              Get Started
+            <Link href="/about/contact">
+              Contact Us
             </Link>
           </div>
         </div>

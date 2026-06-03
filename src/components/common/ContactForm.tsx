@@ -9,7 +9,7 @@ const ContactForm: FC = () => {
     serviceID: 'service_ok4fq8q',
     templateID: 'template_4i6ry2h',
     userID: '-4IgKH_kPsVwf2FfT',
-    toEmail: 'info@thissrishtiinfradevelopers.com',
+    toEmail: 'inf@srishtiinfradevelopers.com',
   };
 
   const sendEmail = async (e: React.FormEvent<HTMLFormElement>) => {

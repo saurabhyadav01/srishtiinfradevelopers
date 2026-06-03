@@ -3,6 +3,7 @@ import { useRouter } from 'next/router';
 import type { AppProps } from 'next/app';
 import { Fragment, useEffect, useState } from 'react';
 import ThemeProvider from 'theme/ThemeProvider';
+import companyContact from 'data/contact';
 
 // Import CSS stylesheets and dependencies
 import 'animate.css';
@@ -42,8 +43,8 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Head>
         <meta charSet="utf-8" />
         <title>thissrishtiinfradevelopers.com</title>
-        <meta name="description" content="Empowering businesses with cutting-edge cloud solutions for enhanced innovation, scalability, and efficiency. Explore our range of services for seamless cloud integration and optimization." />
-        <meta name="keywords" content="cloud solutions, innovation, scalability, efficiency, cloud integration, optimization" />
+        <meta name="description" content={companyContact.metaDescription} />
+        <meta name="keywords" content={companyContact.metaKeywords} />
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="robots" content="index, follow" />
@@ -52,7 +53,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta property="og:title" content="thissrishtiinfradevelopers.com" />
         <link rel="canonical" href="https://thissrishtiinfradevelopers.com" />
 
-        <meta property="og:description" content="Empowering businesses with cutting-edge cloud solutions for enhanced innovation, scalability, and efficiency." />
+        <meta property="og:description" content={companyContact.metaDescription} />
         <meta property="og:image" content="https://thissrishtiinfradevelopers.com/img/logo.jpg" />
         <meta property="og:url" content="https://thissrishtiinfradevelopers.com" />
       </Head>

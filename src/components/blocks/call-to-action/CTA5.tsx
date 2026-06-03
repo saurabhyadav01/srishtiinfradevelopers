@@ -1,6 +1,8 @@
 import { FC } from 'react';
 import Puzzle from 'icons/lineal/Puzzle';
 
+import companyContact from 'data/contact';
+
 const CTA5: FC = () => {
   return (
     <section className="wrapper bg-soft-primary">
@@ -9,9 +11,9 @@ const CTA5: FC = () => {
           <div className="col-md-9 col-lg-7 col-xl-7 mx-auto text-center">
             <Puzzle />
 
-            <h2 className="display-4 mb-3">Join Our Community</h2>
+            <h2 className="display-4 mb-3">Ready to Own Your Dream Property?</h2>
             <p className="lead fs-lg mb-6 px-xl-10 px-xxl-15">
-              We are trusted by over 20+ clients. Join them by using our services and grow your business.
+              Join hundreds of happy families who chose {companyContact.name}. Contact us today for site visits and exclusive offers.
             </p>
           </div>
         </div>

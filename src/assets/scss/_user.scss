@@ -1,1 +1,108 @@
-// Use this to write your custom SCSS
+// Real estate website theme
+:root {
+  --re-primary: #1a365d;
+  --re-primary-dark: #0f2440;
+  --re-primary-light: #2c5282;
+  --re-accent: #c8a951;
+  --re-accent-dark: #a8893a;
+  --re-bg: #faf8f5;
+  --re-bg-soft: #f5f1eb;
+  --re-bg-warm: #ede8df;
+  --re-text: #2d3748;
+  --re-text-muted: #718096;
+  --re-success: #276749;
+  --re-gradient: linear-gradient(135deg, #0f2440 0%, #1a365d 50%, #2c5282 100%);
+}
+
+body {
+  background-color: var(--re-bg);
+  color: var(--re-text);
+}
+
+h1, h2, h3, h4, h5, h6,
+.display-1, .display-2, .display-3, .display-4, .display-5, .display-6 {
+  color: var(--re-primary-dark);
+}
+
+.section-label {
+  background: rgba(200, 169, 81, 0.15) !important;
+  color: var(--re-accent-dark) !important;
+  border: 1px solid rgba(200, 169, 81, 0.3);
+}
+
+.btn-primary {
+  background-color: var(--re-primary) !important;
+  border-color: var(--re-primary) !important;
+
+  &:hover,
+  &:focus {
+    background-color: var(--re-primary-light) !important;
+    border-color: var(--re-primary-light) !important;
+  }
+}
+
+.btn-outline-primary {
+  color: var(--re-primary) !important;
+  border-color: var(--re-primary) !important;
+
+  &:hover {
+    background-color: var(--re-primary) !important;
+    border-color: var(--re-primary) !important;
+    color: #fff !important;
+  }
+}
+
+.btn-accent {
+  background-color: var(--re-accent) !important;
+  border-color: var(--re-accent) !important;
+  color: var(--re-primary-dark) !important;
+  font-weight: 600;
+
+  &:hover {
+    background-color: var(--re-accent-dark) !important;
+    border-color: var(--re-accent-dark) !important;
+    color: #fff !important;
+  }
+}
+
+.bg-soft-primary {
+  background-color: var(--re-bg-soft) !important;
+}
+
+.wrapper.bg-light {
+  background-color: var(--re-bg) !important;
+}
+
+.text-primary {
+  color: var(--re-primary) !important;
+}
+
+.badge.bg-primary {
+  background-color: var(--re-primary) !important;
+}
+
+.badge.bg-success {
+  background-color: var(--re-success) !important;
+}
+
+.realestate-bg {
+  background: linear-gradient(160deg, #faf8f5 0%, #f5f1eb 50%, #ede8df 100%) !important;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: var(--re-text);
+  font-weight: 500;
+
+  &:hover,
+  &.active {
+    color: var(--re-accent-dark) !important;
+  }
+}
+
+.card {
+  border-color: rgba(26, 54, 93, 0.06);
+}
+
+.page-loader {
+  background: var(--re-bg);
+}

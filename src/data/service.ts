@@ -75,30 +75,30 @@ export const serviceList2 = [
   {
     id: 1,
     linkUrl: '#',
-    title: '24/7 Support',
-    icon: 'uil-phone-volume',
-    description: `Get assistance anytime with our dedicated support team, ready to help you resolve issues and answer questions around the clock.`
+    title: 'Land Procurement',
+    icon: 'uil-map-marker',
+    description: `Strategic land acquisition with clear titles and full legal due diligence across Noida and NCR.`
   },
   {
     id: 2,
     linkUrl: '#',
-    title: 'Secure Payments',
-    icon: 'uil-shield-exclamation',
-    description: `Get assistance anytime with our dedicated support team, ready to help you resolve issues and answer questions around the clock.`
+    title: 'Project Planning',
+    icon: 'uil-ruler-combined',
+    description: `Complete layout design, regulatory approvals, and RERA registration for every development.`
   },
   {
     id: 3,
     linkUrl: '#',
-    title: 'Daily Updates',
-    icon: 'uil-laptop-cloud',
-    description: `Get assistance anytime with our dedicated support team, ready to help you resolve issues and answer questions around the clock.`
+    title: 'Construction',
+    icon: 'uil-building',
+    description: `Quality construction with modern infrastructure, roads, drainage, and utility connections.`
   },
   {
     id: 4,
     linkUrl: '#',
-    title: 'Market Research',
-    icon: 'uil-chart-line',
-    description: `Get assistance anytime with our dedicated support team, ready to help you resolve issues and answer questions around the clock.`
+    title: 'Sales & Handover',
+    icon: 'uil-key-skeleton',
+    description: `Transparent sales, registry support, and smooth possession handover to every customer.`
   }
 ];
 
@@ -232,37 +232,37 @@ export const serviceList7 = [
     id: 1,
     Icon: Telephone,
     color: color.yellow,
-    title: '24/7 Support',
+    title: 'Clear Land Titles',
     cardColor: 'bg-pale-yellow',
     columnClass: 'col-md-5 offset-md-1 align-self-end',
-    description: 'We understand that business doesn’t stop — and neither do we. Our 24/7 support model ensures you have expert help anytime, anywhere, keeping your operations smooth and your team confident.'
+    description: 'Every project comes with verified land titles and complete legal documentation — emphasizing trust, integrity and transparency.'
   },
   {
     id: 2,
     Icon: Shield,
     color: color.red,
-    title: 'Secure Payments',
+    title: 'RERA Registered',
     cardColor: 'bg-pale-red',
     columnClass: 'col-md-6 align-self-end',
-    description: 'Security isn’t optional — it’s foundational. With built-in protection across every transaction, our payment systems ensure customers and partners can transact with complete confidence.'
+    description: 'All our running projects are registered under RERA with transparent pricing, committed timelines, and regular construction progress updates.'
   },
   {
     id: 3,
     Icon: CloudComputing,
     color: color.leaf,
-    title: 'Daily Updates',
+    title: 'On-Time Delivery',
     cardColor: 'bg-pale-leaf',
     columnClass: 'col-md-5',
-    description: 'Clear communication builds strong partnerships. That’s why we provide daily updates — so you’re always informed, aligned, and in control.'
+    description: 'We honour all our commitments — perfect professionals who deliver projects on schedule, every time.'
   },
   {
     id: 4,
     Icon: Analytics,
     color: color.primary,
-    title: 'Market Research',
+    title: 'Prime Locations',
     cardColor: 'bg-pale-primary',
     columnClass: 'col-md-6 align-self-start',
-    description: 'Instinct alone isn’t enough in today’s dynamic market. Arglin Tech delivers data-driven research that powers strategic decisions — from new market entry to product launches and beyond.'
+    description: 'Prime locations across Noida and Greater Noida — customer satisfaction through excellent connectivity and long-term value.'
   }
 ];
 
