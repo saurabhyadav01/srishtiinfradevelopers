@@ -144,6 +144,31 @@ h1, h2, h3, h4, h5, h6,
   }
 }
 
+// Top bar (address, email, phone)
+.site-top-bar {
+  background-color: #2d3748;
+  color: #fff;
+}
+
+.site-top-bar-mobile {
+  font-size: 0.68rem;
+  padding: 4px 8px;
+}
+
+.site-top-bar-desktop {
+  font-size: 0.72rem;
+  padding: 4px 0;
+}
+
+.site-top-bar-icon,
+.site-top-bar-social-icon {
+  color: var(--re-accent);
+}
+
+.site-top-bar-social-icon {
+  font-size: 0.9rem;
+}
+
 // Compact site header / menu bar
 .compact-navbar-brand {
   padding-top: 0.2rem !important;
@@ -159,15 +184,16 @@ h1, h2, h3, h4, h5, h6,
 }
 
 .compact-navbar-title {
-  font-size: 0.8rem;
+  font-size: 0.72rem;
   line-height: 1.2;
   color: var(--re-primary-dark);
 }
 
-.navbar.center-nav .navbar-nav .nav-link {
+.navbar.center-nav .navbar-nav .nav-link,
+.home-page-nav .nav-link {
   padding-top: 0.35rem !important;
   padding-bottom: 0.35rem !important;
-  font-size: 0.85rem;
+  font-size: 0.78rem;
 }
 
 header.home-header .container {

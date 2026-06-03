@@ -4,22 +4,14 @@ import companyContact from 'data/contact';
 const SiteTopBar: FC = () => {
   return (
     <>
-      <div
-        className="d-md-none"
-        style={{
-          backgroundColor: '#2d3748',
-          color: '#fff',
-          fontSize: '0.75rem',
-          padding: '5px 10px'
-        }}
-      >
+      <div className="site-top-bar site-top-bar-mobile d-md-none">
         <div className="d-flex flex-column align-items-center gap-1 text-center">
           <a href={`mailto:${companyContact.email}`} className="text-white text-decoration-none">
             <i className="uil uil-envelope me-1" style={{ color: '#C8A951' }} />
             {companyContact.email}
           </a>
           <a href={`tel:${companyContact.phoneTel}`} className="text-white text-decoration-none">
-            <i className="uil uil-phone me-1" style={{ color: '#C8A951' }} />
+            <i className="uil uil-phone me-1 site-top-bar-icon" />
             {companyContact.phone}
           </a>
           <div className="d-flex align-items-center gap-3 mt-1">
@@ -33,27 +25,19 @@ const SiteTopBar: FC = () => {
                 title={label}
                 className="text-white text-decoration-none"
               >
-                <i className={icon} style={{ color: '#C8A951', fontSize: '1.1rem' }} />
+                <i className={`${icon} site-top-bar-social-icon`} />
               </a>
             ))}
           </div>
         </div>
       </div>
-      <div
-        className="d-none d-md-block"
-        style={{
-          backgroundColor: '#2d3748',
-          color: '#fff',
-          fontSize: '0.8rem',
-          padding: '5px 0'
-        }}
-      >
+      <div className="site-top-bar site-top-bar-desktop d-none d-md-block">
         <div
           className="container d-flex flex-wrap justify-content-between align-items-center gap-2"
           style={{ maxWidth: '95%' }}
         >
           <div className="d-flex align-items-center gap-2">
-            <i className="uil uil-map-marker" style={{ color: '#C8A951' }} />
+            <i className="uil uil-map-marker site-top-bar-icon" />
             <span>{companyContact.addressShort}</span>
           </div>
           <div className="d-flex align-items-center gap-4 flex-wrap justify-content-end">
@@ -68,7 +52,7 @@ const SiteTopBar: FC = () => {
                   title={label}
                   className="text-white text-decoration-none"
                 >
-                  <i className={icon} style={{ color: '#C8A951', fontSize: '1.05rem' }} />
+                  <i className={`${icon} site-top-bar-social-icon`} />
                 </a>
               ))}
             </div>
@@ -76,14 +60,14 @@ const SiteTopBar: FC = () => {
               href={`mailto:${companyContact.email}`}
               className="text-white text-decoration-none d-flex align-items-center gap-1 fw-semibold"
             >
-              <i className="uil uil-envelope" style={{ color: '#C8A951' }} />
+              <i className="uil uil-envelope site-top-bar-icon" />
               {companyContact.email}
             </a>
             <a
               href={`tel:${companyContact.phoneTel}`}
               className="text-white text-decoration-none d-flex align-items-center gap-1"
             >
-              <i className="uil uil-phone" style={{ color: '#C8A951' }} />
+              <i className="uil uil-phone site-top-bar-icon" />
               {companyContact.phone}
             </a>
           </div>

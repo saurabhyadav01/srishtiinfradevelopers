@@ -31,7 +31,6 @@ const HomePage: NextPage = () => {
         .home-page-nav .nav-link {
           font-weight: 500;
           text-transform: uppercase;
-          font-size: 0.9rem;
           letter-spacing: 0.02em;
         }
         .home-page-nav .nav-link[href='/'],
