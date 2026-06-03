@@ -19,15 +19,6 @@ const images = [
     type: 'Residential & Commercial'
   },
   {
-    id: 3,
-    className: 'col-md-6 offset-md-1',
-    src: '/img/projects/WhatsApp Image 2026-05-31 at 18.30.11.jpeg',
-    alt: 'Sanskriti Row Houses',
-    title: 'Sanskriti Row Houses',
-    type: 'Row Houses',
-    description: 'Elegant row house design with arched windows, private balconies, and rooftop pergolas.'
-  },
-  {
     id: 4,
     className: 'col-md-4 align-self-start',
     src: '/img/projects/WhatsApp Image 2026-05-31 at 18.30.12.jpeg',

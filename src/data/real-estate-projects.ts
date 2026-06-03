@@ -25,16 +25,6 @@ export const runningProjects: RealEstateProject[] = [
     highlights: ['Under Development', 'Gated Entry', 'Affordable Living']
   },
   {
-    id: 2,
-    title: 'Sanskriti Row Houses',
-    location: 'Noida, Uttar Pradesh',
-    type: 'Row Houses',
-    status: 'running',
-    image: runningImage('WhatsApp Image 2026-05-31 at 18.30.11.jpeg'),
-    description: 'Elegant row house design with arched windows, private balconies, rooftop pergolas, and wide paved driveways.',
-    highlights: ['Modern Design', 'Private Balconies', 'Premium Finishes']
-  },
-  {
     id: 3,
     title: 'Sanskriti Residency',
     location: 'Noida, Uttar Pradesh',
@@ -53,16 +43,6 @@ export const runningProjects: RealEstateProject[] = [
     image: runningImage('WhatsApp Image 2026-05-31 at 18.30.12 (1).jpeg'),
     description: 'Independent floor units with arched entryways, decorative balconies, and modern architectural detailing.',
     highlights: ['Independent Floors', 'Arched Design', 'Spacious Layout']
-  },
-  {
-    id: 5,
-    title: 'Sanskriti Premium Villas',
-    location: 'Noida, Uttar Pradesh',
-    type: 'Luxury Villas',
-    status: 'running',
-    image: runningImage('WhatsApp Image 2026-05-31 at 18.30.12 (2).jpeg'),
-    description: 'Premium villa community with interlocking stone driveways, landscaped surroundings, and luxury living spaces.',
-    highlights: ['Luxury Living', 'Landscaped Area', 'Premium Location']
   },
   {
     id: 8,
