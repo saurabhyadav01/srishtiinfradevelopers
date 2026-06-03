@@ -1,7 +1,17 @@
 import { FC } from 'react';
 import theme from 'data/theme';
 
-const images = [
+type TileImage = {
+  id: number;
+  className: string;
+  src: string;
+  alt: string;
+  title: string;
+  type: string;
+  description?: string;
+};
+
+const images: TileImage[] = [
   {
     id: 1,
     className: 'col-md-6 align-self-end',
