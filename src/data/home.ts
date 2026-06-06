@@ -36,23 +36,23 @@ export const heroSlides = officeSliderImages.map((image, index) => ({
 export const featuredProperties = [
   {
     id: 1,
-    title: 'Sanskriti Villas',
-    location: 'Greater Noida West',
-    type: 'Residential Villas',
-    image: '/img/projects/WhatsApp Image 2026-05-31 at 18.30.13.jpeg'
+    title: 'Sanskriti Garden Phase-I',
+    location: 'Sanskriti Garden, Sector 16B, Noida Extension',
+    type: 'Residential Plots',
+    image: '/img/deliveredproject/DELIVERED2.jpeg'
   },
   {
     id: 2,
-    title: 'Sanskriti Residency',
-    location: 'Noida, Uttar Pradesh',
-    type: 'Residential Apartments',
-    image: '/img/projects/WhatsApp Image 2026-05-31 at 18.30.12.jpeg'
+    title: 'Sanskriti Villas',
+    location: 'Greater Noida West, Uttar Pradesh',
+    type: 'Residential Villas',
+    image: '/img/projects/WhatsApp Image 2026-05-31 at 18.30.13.jpeg'
   }
 ];
 
 export const homeStats = [
   { id: 1, value: new Date().getFullYear() - companyContact.foundedYear, suffix: '+', label: 'Years of Experience', icon: 'uil-calendar-alt' },
-  { id: 2, value: 7, suffix: '+', label: 'Total Projects', icon: 'uil-building' },
+  { id: 2, value: 3, suffix: '+', label: 'Total Projects', icon: 'uil-building' },
   { id: 3, value: 500, suffix: '+', label: 'Happy Families', icon: 'uil-users-alt' },
   { id: 4, value: 100, suffix: '%', label: 'RERA Compliant', icon: 'uil-shield-check' }
 ];
@@ -89,7 +89,7 @@ export const developmentProcess = [
 ];
 
 export const featuredProject = {
-  title: 'Sanskriti Villas — Greater Noida West',
+  title: 'Sanskriti Villas',
   location: 'Greater Noida West, Uttar Pradesh',
   type: 'Residential Villas',
   status: 'Running',

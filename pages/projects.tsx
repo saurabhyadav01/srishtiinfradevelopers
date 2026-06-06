@@ -4,7 +4,7 @@ import PageProgress from 'components/common/PageProgress';
 import SiteTopBar from 'components/common/SiteTopBar';
 import { Navbar } from 'components/blocks/navbar';
 import { Footer8 } from 'components/blocks/footer';
-import ProjectSection from 'components/blocks/projects/ProjectSection';
+import ProjectListSection from 'components/blocks/projects/ProjectListSection';
 import SectionIcon from 'components/blocks/projects/SectionIcon';
 import { runningProjects, deliveredProjects } from 'data/real-estate-projects';
 
@@ -35,33 +35,31 @@ const ProjectsPage: NextPage = () => {
             </div>
 
             <div className="d-flex flex-wrap gap-2 mb-2">
-              <a href="#running" className="btn btn-primary btn-sm rounded-pill">Running Projects</a>
-              <a href="#delivered" className="btn btn-outline-primary btn-sm rounded-pill">Delivered Projects</a>
+              <a href="#delivered" className="btn btn-outline-primary btn-sm rounded-pill">Our Delivered</a>
+              <a href="#running" className="btn btn-primary btn-sm rounded-pill">Our Running Projects</a>
             </div>
           </div>
         </section>
 
         <section className="wrapper bg-soft-primary">
           <div className="container pb-10" style={{ maxWidth: '90%' }}>
-            <ProjectSection
-              id="running"
-              title="Our Running Projects"
-              subtitle="Currently under development — premium residential and commercial projects shaping the future of NCR real estate."
-              iconClass="uil uil-hard-hat"
-              projects={runningProjects}
-              bgClass="bg-light"
-              imageHeight={280}
+            <ProjectListSection
+              id="delivered"
+              title="Our Delivered"
+              subtitle="Successfully completed developments with happy families and thriving communities."
+              iconClass="uil uil-check-circle"
+              projects={deliveredProjects}
+              bgClass="bg-white"
             />
 
             <div className="mt-8">
-              <ProjectSection
-                id="delivered"
-                title="Our Delivered Projects"
-                subtitle="Successfully completed developments with happy families and thriving communities."
-                iconClass="uil uil-check-circle"
-                projects={deliveredProjects}
-                bgClass="bg-soft-primary"
-                imageHeight={280}
+              <ProjectListSection
+                id="running"
+                title="Our Running Projects"
+                subtitle="Currently under development — Sanskriti Villas in Greater Noida West."
+                iconClass="uil uil-hard-hat"
+                projects={runningProjects}
+                bgClass="bg-light"
               />
             </div>
           </div>

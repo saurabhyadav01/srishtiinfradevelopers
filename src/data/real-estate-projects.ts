@@ -13,74 +13,49 @@ export type RealEstateProject = {
 
 const runningImage = (filename: string) => `/img/projects/${filename}`;
 
-export const runningProjects: RealEstateProject[] = [
+const completedDeliveredProjects: RealEstateProject[] = [
   {
     id: 1,
+    title: 'Sanskriti Garden Phase-I',
+    location: 'Sanskriti Garden, Sector 16B, Noida Extension',
+    type: 'Residential Plots',
+    status: 'delivered',
+    image: '/img/deliveredproject/DELIVERED2.jpeg',
+    description:
+      'Successfully delivered residential plots in Sanskriti Garden Phase-I with developed roads, utilities, and thriving families.',
+    highlights: ['Delivered', 'Clear Titles', 'Plots', 'Noida Extension', 'RERA']
+  },
+  {
+    id: 2,
+    title: 'Sanskriti City Phase-2',
+    location: 'Noida Extension, Uttar Pradesh',
+    type: 'Residential Township',
+    status: 'delivered',
+    image: runningImage('WhatsApp Image 2026-05-31 at 18.30.12.jpeg'),
+    description:
+      'Completed township development with modern infrastructure, community planning, and possession handed over to happy families.',
+    highlights: ['Delivered', 'Township', 'Infrastructure', 'Community']
+  }
+];
+
+export const runningProjects: RealEstateProject[] = [
+  {
+    id: 3,
     title: 'Sanskriti Villas',
-    location: 'Greater Noida West',
+    location: 'Greater Noida West, Uttar Pradesh',
     type: 'Residential Villas',
     status: 'running',
     image: runningImage('WhatsApp Image 2026-05-31 at 18.30.13.jpeg'),
-    description: 'Affordable luxury villas with modern architecture, gated community entrance, and premium living in Greater Noida West.',
-    highlights: ['Under Development', 'Gated Entry', 'Affordable Living']
-  },
-  {
-    id: 3,
-    title: 'Sanskriti Residency',
-    location: 'Noida, Uttar Pradesh',
-    type: 'Residential Apartments',
-    status: 'running',
-    image: runningImage('WhatsApp Image 2026-05-31 at 18.30.12.jpeg'),
-    description: 'Active construction of multi-storey residential units with contemporary facade, balconies, and quality structural work.',
-    highlights: ['Under Construction', 'Quality Build', 'Timely Progress']
-  },
-  {
-    id: 4,
-    title: 'Sanskriti Enclave',
-    location: 'Noida, Uttar Pradesh',
-    type: 'Independent Floors',
-    status: 'running',
-    image: runningImage('WhatsApp Image 2026-05-31 at 18.30.12 (1).jpeg'),
-    description: 'Independent floor units with arched entryways, decorative balconies, and modern architectural detailing.',
-    highlights: ['Independent Floors', 'Arched Design', 'Spacious Layout']
-  },
-  {
-    id: 8,
-    title: 'Sanskriti Kunj Garden',
-    location: 'Sanskriti Garden, Sector 16B, Noida Extension',
-    type: 'Residential Plots & Gardens',
-    status: 'running',
-    image: runningImage('WhatsApp Image 2026-05-31 at 18.30.11.jpeg'),
     description:
-      'Residential plots and garden homes in Sanskriti Kunj Garden, Noida Extension — green surroundings, clear titles, and modern community planning near PNB Branch, Roja Yakubpur.',
-    highlights: ['Plots Available', 'Garden Community', 'Noida Extension']
+      'Our flagship running project offering affordable luxury villas with modern architecture, gated community entrance, and premium living in Greater Noida West.',
+    highlights: ['Running', 'Villas', 'Gated Community', 'Greater Noida West', 'RERA']
   }
 ];
 
-export const deliveredProjects: RealEstateProject[] = [
-  {
-    id: 6,
-    title: 'Sanskriti Centrum Plaza',
-    location: 'Noida, Uttar Pradesh',
-    type: 'Commercial Complex',
-    status: 'delivered',
-    image: '/img/deliveredproject/DELIVERED1.jpeg',
-    description: 'Modern two-storey commercial shopping complex with premium retail outlets, HDFC Bank, and leading brand stores. Fully developed and operational.',
-    highlights: ['Fully Delivered', 'Retail & Banking', 'Prime Commercial Hub']
-  },
-  {
-    id: 7,
-    title: 'Sanskriti Sanskar Heights',
-    location: 'Noida, Uttar Pradesh',
-    type: 'Residential & Commercial',
-    status: 'delivered',
-    image: '/img/deliveredproject/DELIVERED2.jpeg',
-    description: 'Premium residential towers with ground-floor commercial shops, rooftop gardens, children play areas, and gated community living.',
-    highlights: ['Fully Delivered', 'Rooftop Amenities', 'Shop & Live Complex']
-  }
-];
+// Delivered section includes completed projects plus all current running projects
+export const deliveredProjects: RealEstateProject[] = [...completedDeliveredProjects, ...runningProjects];
 
-export const allProjects = [...runningProjects, ...deliveredProjects];
+export const allProjects = [...runningProjects, ...completedDeliveredProjects];
 
 export const realEstateServices = [
   {

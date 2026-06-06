@@ -17,6 +17,8 @@ import Signin from './partials/Signin';
 import Signup from './partials/Signup';
 import Language from './partials/Language';
 import MiniCart from './partials/MiniCart';
+import ProjectsNavMenu from './partials/ProjectsNavMenu';
+import { deliveredProjects, runningProjects } from 'data/real-estate-projects';
 // -------- data -------- //
 import {
   demos,
@@ -83,14 +85,32 @@ const Navbar: FC<NavbarProps> = (props) => {
                   <li className="nav-item">
               <ListItemLink title={'HOME'} href="/" linkClassName="nav-link" />
             </li>
-            <li className="nav-item dropdown">
-              <DropdownToggleLink title="PROJECTS" className="nav-link dropdown-toggle" />
-              <ul className="dropdown-menu">
-                <ListItemLink href="/projects" title="All Projects" linkClassName="dropdown-item" />
-                <ListItemLink href="/projects#running" title="Running Projects" linkClassName="dropdown-item" />
-                <ListItemLink href="/projects#delivered" title="Delivered Projects" linkClassName="dropdown-item" />
-              </ul>
+            <ProjectsNavMenu />
+            <li className="nav-item d-lg-none">
+              <ListItemLink title="PROJECTS" href="/projects" linkClassName="nav-link" />
             </li>
+            <li className="nav-item d-lg-none">
+              <span className="nav-link mobile-projects-group-title">
+                <i className="uil uil-check-circle" />
+                Our Delivered
+              </span>
+            </li>
+            {deliveredProjects.map((project) => (
+              <li key={`del-${project.id}`} className="nav-item d-lg-none">
+                <ListItemLink href="/#delivered" title={project.title} linkClassName="nav-link mobile-projects-link" />
+              </li>
+            ))}
+            <li className="nav-item d-lg-none">
+              <span className="nav-link mobile-projects-group-title">
+                <i className="uil uil-hard-hat" />
+                Our Running Projects
+              </span>
+            </li>
+            {runningProjects.map((project) => (
+              <li key={`run-${project.id}`} className="nav-item d-lg-none">
+                <ListItemLink href="/#running" title={project.title} linkClassName="nav-link mobile-projects-link" />
+              </li>
+            ))}
             <li className="nav-item">
               <ListItemLink title={'ABOUT US'} href="/about" linkClassName="nav-link" />
             </li>

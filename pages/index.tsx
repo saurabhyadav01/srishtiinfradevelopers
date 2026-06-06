@@ -15,7 +15,7 @@ import HomeProcess from 'components/blocks/home/HomeProcess';
 import HomeFeaturedProject from 'components/blocks/home/HomeFeaturedProject';
 import HomeInquiryBanner from 'components/blocks/home/HomeInquiryBanner';
 import HomeSectionHeader from 'components/blocks/home/HomeSectionHeader';
-import ProjectSection from 'components/blocks/projects/ProjectSection';
+import ProjectListSection from 'components/blocks/projects/ProjectListSection';
 import * as All from 'components/blocks/services';
 import * as Alls from 'components/blocks/faq';
 import { fadeInAnimate } from 'utils/animation';
@@ -107,36 +107,34 @@ const HomePage: NextPage = () => {
               <About6 />
             </div>
 
-            <div className="mt-12" style={fadeInAnimate('200ms')}>
-              <ProjectSection
-                id="running"
-                title="Our Running Projects"
-                subtitle="Active developments across Noida Extension and Greater Noida West — including Sanskriti Villas, Sanskriti Kunj Garden, and more."
-                iconClass="uil uil-hard-hat"
-                projects={runningProjects}
-                bgClass="bg-light"
-                imageHeight={320}
+            <div className="mt-6" style={fadeInAnimate('200ms')}>
+              <ProjectListSection
+                id="delivered"
+                title="Our Delivered"
+                subtitle="Successfully completed developments with families already living in thriving communities."
+                iconClass="uil uil-check-circle"
+                projects={deliveredProjects}
+                bgClass="bg-white"
               />
               <div className="text-center pt-2 pb-4">
-                <Link href="/projects#running" className="btn btn-accent rounded-pill">
-                  View All Running Projects
+                <Link href="/projects#delivered" className="btn btn-outline-primary rounded-pill">
+                  View All Delivered Projects
                 </Link>
               </div>
             </div>
 
             <div className="mt-6" style={fadeInAnimate('300ms')}>
-              <ProjectSection
-                id="delivered"
-                title="Our Delivered Projects"
-                subtitle="Successfully completed developments with families already living in thriving communities."
-                iconClass="uil uil-check-circle"
-                projects={deliveredProjects}
-                bgClass="bg-white"
-                imageHeight={280}
+              <ProjectListSection
+                id="running"
+                title="Our Running Projects"
+                subtitle="Active development — Sanskriti Villas in Greater Noida West with gated community living and modern architecture."
+                iconClass="uil uil-hard-hat"
+                projects={runningProjects}
+                bgClass="bg-light"
               />
               <div className="text-center pt-2 pb-4">
-                <Link href="/projects#delivered" className="btn btn-outline-primary rounded-pill">
-                  View All Delivered Projects
+                <Link href="/projects#running" className="btn btn-accent rounded-pill">
+                  View All Running Projects
                 </Link>
               </div>
             </div>

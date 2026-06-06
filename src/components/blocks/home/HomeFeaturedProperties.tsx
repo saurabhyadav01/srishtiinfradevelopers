@@ -16,9 +16,12 @@ const HomeFeaturedProperties: FC = () => {
         </div>
 
         <div className="row g-4">
-          {featuredProperties.map((project) => (
+          {featuredProperties.map((project) => {
+            const isDelivered = project.id === 1;
+            const sectionHref = isDelivered ? '/#delivered' : '/#running';
+            return (
             <div key={project.id} className="col-md-6 col-lg-6">
-              <Link href="/projects#running" className="text-decoration-none">
+              <Link href={sectionHref} className="text-decoration-none">
                 <div
                   className="card border-0 h-100 overflow-hidden"
                   style={{ boxShadow: '0 4px 20px rgba(0,0,0,0.08)', transition: 'transform 0.3s ease' }}
@@ -38,9 +41,9 @@ const HomeFeaturedProperties: FC = () => {
                     />
                     <span
                       className="position-absolute top-0 start-0 m-3 badge rounded-0 px-3 py-2"
-                      style={{ backgroundColor: theme.primary, fontSize: '0.75rem' }}
+                      style={{ backgroundColor: isDelivered ? theme.success : theme.primary, fontSize: '0.75rem' }}
                     >
-                      Under Development
+                      {isDelivered ? 'Delivered' : 'Under Development'}
                     </span>
                   </div>
                   <div className="card-body p-4">
@@ -61,7 +64,8 @@ const HomeFeaturedProperties: FC = () => {
                 </div>
               </Link>
             </div>
-          ))}
+          );
+          })}
         </div>
 
         <div className="text-center mt-6">
