@@ -64,7 +64,7 @@ const HomeFeaturedProject: FC = () => {
                   ))}
                 </div>
                 <div className="mt-auto d-flex flex-wrap gap-1">
-                  <Link href="/projects#running" className="btn btn-accent rounded-pill">
+                  <Link href={`/projects/${featuredProject.slug}`} className="btn btn-accent rounded-pill">
                     View Project Details
                   </Link>
                   <a

@@ -43,20 +43,23 @@ const ProjectsPage: NextPage = () => {
 
         <section className="wrapper bg-soft-primary">
           <div className="container pb-10" style={{ maxWidth: '90%' }}>
-            <ProjectListSection
-              id="delivered"
-              title="Our Delivered"
-              subtitle="Successfully completed developments with happy families and thriving communities."
-              iconClass="uil uil-check-circle"
-              projects={deliveredProjects}
-              bgClass="bg-white"
-            />
+            <div className="project-delivered-wrap">
+              <ProjectListSection
+                id="delivered"
+                title="Our Delivered"
+                subtitle="Successfully completed developments with happy families and thriving communities."
+                iconClass="uil uil-check-circle"
+                projects={deliveredProjects}
+                bgClass="bg-white"
+                wide
+              />
+            </div>
 
             <div className="mt-8">
               <ProjectListSection
                 id="running"
                 title="Our Running Projects"
-                subtitle="Currently under development — Sanskriti Villas in Greater Noida West."
+                subtitle="Currently under development — Sanskriti Villas and Sanskriti Kunj Garden."
                 iconClass="uil uil-hard-hat"
                 projects={runningProjects}
                 bgClass="bg-light"

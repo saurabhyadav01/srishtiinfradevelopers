@@ -18,7 +18,7 @@ import Signup from './partials/Signup';
 import Language from './partials/Language';
 import MiniCart from './partials/MiniCart';
 import ProjectsNavMenu from './partials/ProjectsNavMenu';
-import { deliveredProjects, runningProjects } from 'data/real-estate-projects';
+import { deliveredProjects, getProjectHref, runningProjects } from 'data/real-estate-projects';
 // -------- data -------- //
 import {
   demos,
@@ -97,7 +97,7 @@ const Navbar: FC<NavbarProps> = (props) => {
             </li>
             {deliveredProjects.map((project) => (
               <li key={`del-${project.id}`} className="nav-item d-lg-none">
-                <ListItemLink href="/#delivered" title={project.title} linkClassName="nav-link mobile-projects-link" />
+                <ListItemLink href={getProjectHref(project.slug)} title={project.title} linkClassName="nav-link mobile-projects-link" />
               </li>
             ))}
             <li className="nav-item d-lg-none">
@@ -108,7 +108,7 @@ const Navbar: FC<NavbarProps> = (props) => {
             </li>
             {runningProjects.map((project) => (
               <li key={`run-${project.id}`} className="nav-item d-lg-none">
-                <ListItemLink href="/#running" title={project.title} linkClassName="nav-link mobile-projects-link" />
+                <ListItemLink href={getProjectHref(project.slug)} title={project.title} linkClassName="nav-link mobile-projects-link" />
               </li>
             ))}
             <li className="nav-item">

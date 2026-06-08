@@ -10,12 +10,13 @@ type Props = {
   iconClass: string;
   projects: RealEstateProject[];
   bgClass?: string;
+  wide?: boolean;
 };
 
-const ProjectListSection: FC<Props> = ({ id, title, subtitle, iconClass, projects, bgClass = 'bg-light' }) => {
+const ProjectListSection: FC<Props> = ({ id, title, subtitle, iconClass, projects, bgClass = 'bg-light', wide = false }) => {
   return (
-    <section id={id} className={`wrapper ${bgClass} rounded-3`}>
-      <div className="container py-8 py-md-10" style={{ maxWidth: '100%' }}>
+    <section id={id} className={`wrapper ${bgClass} rounded-3${wide ? ' project-section-wide' : ''}`}>
+      <div className="container py-8 py-md-10 project-section-container">
         <div className="project-section-header">
           <div className="project-section-header-main">
             <SectionIcon iconClass={iconClass} />

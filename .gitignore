@@ -36,3 +36,10 @@ yarn-error.log*
 
 tools/node_modules
 tools/output
+
+# raw project media (use extracted jpgs in project folders instead)
+public/img/projects/*.MOV
+public/img/projects/*.mov
+public/img/projects/*.DNG
+public/img/projects/*.dng
+public/img/projects/*.zip

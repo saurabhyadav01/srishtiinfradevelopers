@@ -1,6 +1,7 @@
+import Link from 'next/link';
 import { CSSProperties, FC } from 'react';
 import theme from 'data/theme';
-import { RealEstateProject } from 'data/real-estate-projects';
+import { RealEstateProject, getProjectHref } from 'data/real-estate-projects';
 
 type Props = {
   project: RealEstateProject;
@@ -11,6 +12,7 @@ const ProjectListRow: FC<Props> = ({ project, index }) => {
   const isRunning = project.status === 'running';
 
   return (
+    <Link href={getProjectHref(project.slug)} className="text-decoration-none project-list-row-link">
     <article
       className={`project-list-row project-list-row--${project.status}`}
       style={{ '--row-accent': isRunning ? theme.primary : theme.success } as CSSProperties}
@@ -43,6 +45,7 @@ const ProjectListRow: FC<Props> = ({ project, index }) => {
         <i className="uil uil-arrow-right" />
       </div>
     </article>
+    </Link>
   );
 };
 

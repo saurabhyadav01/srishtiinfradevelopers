@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { FC, ReactNode } from 'react';
 import DropdownToggleLink from 'components/reuseable/links/DropdownToggleLink';
-import { deliveredProjects, runningProjects } from 'data/real-estate-projects';
+import { deliveredProjects, getProjectHref, runningProjects } from 'data/real-estate-projects';
 
 const Level2Toggle: FC<{ children: ReactNode; className?: string }> = ({ children, className = '' }) => (
   <a href="#" className={`dropdown-item projects-nav-level2-toggle ${className}`} onClick={(e) => e.preventDefault()}>
@@ -39,7 +39,7 @@ const ProjectsNavMenu = () => {
               <li className="projects-nav-level3-title px-3 pb-2">Delivered Projects</li>
               {deliveredProjects.map((project) => (
                 <li key={project.id}>
-                  <Link href="/#delivered" className="dropdown-item projects-nav-link">
+                  <Link href={getProjectHref(project.slug)} className="dropdown-item projects-nav-link">
                     {project.title}
                   </Link>
                 </li>
@@ -74,7 +74,7 @@ const ProjectsNavMenu = () => {
               <li className="projects-nav-level3-title px-3 pb-2">Running Projects</li>
               {runningProjects.map((project) => (
                 <li key={project.id}>
-                  <Link href="/#running" className="dropdown-item projects-nav-link">
+                  <Link href={getProjectHref(project.slug)} className="dropdown-item projects-nav-link">
                     {project.title}
                   </Link>
                 </li>

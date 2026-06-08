@@ -17,11 +17,10 @@ const HomeFeaturedProperties: FC = () => {
 
         <div className="row g-4">
           {featuredProperties.map((project) => {
-            const isDelivered = project.id === 1;
-            const sectionHref = isDelivered ? '/#delivered' : '/#running';
+            const isDelivered = project.slug === 'sanskriti-garden-phase-1';
             return (
             <div key={project.id} className="col-md-6 col-lg-6">
-              <Link href={sectionHref} className="text-decoration-none">
+              <Link href={`/projects/${project.slug}`} className="text-decoration-none">
                 <div
                   className="card border-0 h-100 overflow-hidden"
                   style={{ boxShadow: '0 4px 20px rgba(0,0,0,0.08)', transition: 'transform 0.3s ease' }}

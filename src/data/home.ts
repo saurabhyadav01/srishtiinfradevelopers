@@ -36,23 +36,25 @@ export const heroSlides = officeSliderImages.map((image, index) => ({
 export const featuredProperties = [
   {
     id: 1,
+    slug: 'sanskriti-garden-phase-1',
     title: 'Sanskriti Garden Phase-I',
     location: 'Sanskriti Garden, Sector 16B, Noida Extension',
     type: 'Residential Plots',
     image: '/img/deliveredproject/DELIVERED2.jpeg'
   },
   {
-    id: 2,
+    id: 3,
+    slug: 'sanskriti-villas',
     title: 'Sanskriti Villas',
     location: 'Greater Noida West, Uttar Pradesh',
     type: 'Residential Villas',
-    image: '/img/projects/WhatsApp Image 2026-05-31 at 18.30.13.jpeg'
+    image: '/img/projects/sanskriti-villas/01.jpg'
   }
 ];
 
 export const homeStats = [
   { id: 1, value: new Date().getFullYear() - companyContact.foundedYear, suffix: '+', label: 'Years of Experience', icon: 'uil-calendar-alt' },
-  { id: 2, value: 3, suffix: '+', label: 'Total Projects', icon: 'uil-building' },
+  { id: 2, value: 7, suffix: '+', label: 'Total Projects', icon: 'uil-building' },
   { id: 3, value: 500, suffix: '+', label: 'Happy Families', icon: 'uil-users-alt' },
   { id: 4, value: 100, suffix: '%', label: 'RERA Compliant', icon: 'uil-shield-check' }
 ];
@@ -89,6 +91,7 @@ export const developmentProcess = [
 ];
 
 export const featuredProject = {
+  slug: 'sanskriti-villas',
   title: 'Sanskriti Villas',
   location: 'Greater Noida West, Uttar Pradesh',
   type: 'Residential Villas',
@@ -99,5 +102,5 @@ export const featuredProject = {
   videoPoster: '/img/logo.jpg',
   videoSrc: '/img/N-237 Srishti Infra Plots Sector 12 Noida Video.mp4',
   brochureUrl: '/img/Designs.pdf',
-  image: '/img/projects/WhatsApp Image 2026-05-31 at 18.30.13.jpeg'
+  image: '/img/projects/sanskriti-villas/01.jpg'
 };

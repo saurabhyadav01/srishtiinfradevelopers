@@ -107,7 +107,7 @@ const HomePage: NextPage = () => {
               <About6 />
             </div>
 
-            <div className="mt-6" style={fadeInAnimate('200ms')}>
+            <div className="mt-6 project-delivered-wrap" style={fadeInAnimate('200ms')}>
               <ProjectListSection
                 id="delivered"
                 title="Our Delivered"
@@ -115,6 +115,7 @@ const HomePage: NextPage = () => {
                 iconClass="uil uil-check-circle"
                 projects={deliveredProjects}
                 bgClass="bg-white"
+                wide
               />
               <div className="text-center pt-2 pb-4">
                 <Link href="/projects#delivered" className="btn btn-outline-primary rounded-pill">
@@ -127,7 +128,7 @@ const HomePage: NextPage = () => {
               <ProjectListSection
                 id="running"
                 title="Our Running Projects"
-                subtitle="Active development — Sanskriti Villas in Greater Noida West with gated community living and modern architecture."
+                subtitle="Active development — Sanskriti Villas and Sanskriti Kunj Garden with gated community living and garden plots in Noida Extension."
                 iconClass="uil uil-hard-hat"
                 projects={runningProjects}
                 bgClass="bg-light"
